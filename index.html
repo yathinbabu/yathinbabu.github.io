@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Yathin Babu</title>
-        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-        <style>
-          html,
+        <title>Yathin Babu N</title>
+        <link rel="icon" href="https://user-images.githubusercontent.com/39874341/56673449-ec4c4780-66d5-11e9-8504-cd3618226daa.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+        <style type="text/css">
+        html,
 body {
   font-family: 'Muli', sans-serif;
   text-align: center;
@@ -16,181 +17,125 @@ body {
 }
 
 .intro {
-  top: 0;
-  background: #efefef;
-  min-height: 55vh;
-  padding-top: 45vh;
-  /*   line-height: 100vh; */
-  /*   width:100%;
-  height:96vh;
-border:solid; */
-}
+    top: 0;
+    background: url('https://user-images.githubusercontent.com/39874341/56671214-e18fb380-66d1-11e9-917a-09eeda595487.png');
+    background-size: cover;
+    min-height: 55vh;
+    padding-top: 45vh;
+    /*   line-height: 100vh; */
+    /*   width:100%;
+    height:96vh;
+  border:solid; */
+  }
+  
+  .intro p, h1 {
+    color: #fff;
+  }
 
-.intro p {
-  color: green;
-}
-
-nav ul {
-  text-align: right;
-  position: fixed;
-  width: 100%;
-  background-color: #efefef;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 55px;
-  margin-bottom: 15px;
-  margin-top: 25px;
-}
-
-nav ul li a {
-  color: #008080;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: green;
-}
-
-.work {
-  padding-top: 60px;
-  margin-top: -60px;
-}
-
-.work .work-header {
-  margin-top: 50px;
-  color: #008080;
-  font-weight: normal;
-}
-
-.project {
-  text-decoration: none;
-  color: #008080;
-  display: inline-block;
-  overflow: hidden;
-  border: 2px solid lightblue;
-  height: 220px;
-  width: 280px;
-  margin: 40px 100px;
-  /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
-}
-
-.project-pic {
-  width: 100%;
-  height: 180px;
-  border-bottom: 2px solid lightblue;
-}
-
-.project-title {
-  font-weight: bold;
-}
-
-.show-all {
-  text-decoration: none;
-  display: block;
-  width: 200px;
-  height: 30px;
-  margin: 20px auto 90px;
-   background: #e0ebe8;
-  color: #008080;
-  font-weight: bold;
-  font-size: 1em;
-  border: 2px solid #90C695;
-  border-radius: 4px;
-  cursor: pointer;
-  padding-top:10px;
-}
-
-
-.show-all:hover {
-  background: #E4F1FE;
-  color: green;
-}
-
-@media only screen and (max-width: 500px) {
+  .intro a {
+      font-size: 50px;
+      color: #fff;
+      text-decoration: none;
+  }
+  
   nav ul {
-    text-align: center;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    background-color: #000;
   }
+  
   nav ul li {
-    margin: 20px;
+    display: inline-block;
+    margin: 55px;
+    margin-bottom: 15px;
+    margin-top: 25px;
   }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .logo {
+      width: 25px;
+      height: 25px;
+  }
+
+  .work {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
+  
+  .work .work-header {
+    margin-top: 50px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
   .project {
-    margin: 40px 0;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    height: 220px;
+    width: 280px;
+    margin: 40px 100px;
+    /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
   }
-}
-
-.contact {
-  /*   height:800px; */
-  /*   min-height:800px; */
-  background: #C8F7C5;
-  padding-bottom: 160px;
-}
-
-.header {
-  padding: 160px 0 110px;
-}
-
-.technologies-details {
-  display: inline-block;
-  margin: 0 35px 45px 35px;
-  list-style-type: none;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-}
-
-.contact-details {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0 35px 45px 35px;
-  list-style-type: none;
-  border: 2px solid #90C695;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  background: #e0ebe8;
-  color: #008080;
-  text-decoration: none;
-}
-
-.contact-details:hover {
-  background: #E4F1FE;
-  color: green;
-}
-
-footer {
-  padding: 20px;
-  background: #22313F;
-  color: white;
-  line-height: 40px;
-}
-
-footer a {
-  color: white;
-}
-
-@media only screen and (max-width: 367px) {
-  /*    #contact{
-    min-height:1100px;
-  } */
-  .contact-details {
-    border: 2px solid #90C695;
-    border-radius: 0;
-    width: 90px;
-    height: 20px;
-    padding: 10px;
-    line-height: normal;
+  
+  .project-pic {
+    width: 100%;
+    height: 180px;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .project-title {
+    font-weight: bold;
   }
 
-  .technologies-details {
-    width: 90px;
-    height: 20px;
-    padding: 10px;
-    line-height: normal;
+  @media only screen and (max-width: 500px) {
+    nav ul {
+      text-align: center;
+    }
+    nav ul li {
+      margin: 20px;
+    }
+    .project {
+      margin: 40px 0;
+    }
   }
-}
+
+  @media only screen and (max-width: 768px) {
+    .intro a {
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+    } 
+  }
+  
+  .header {
+    padding: 160px 0 110px;
+  }
+
+  footer {
+    padding: 20px;
+    background: #000;
+    color: white;
+    line-height: 40px;
+  }
+  
+  footer a {
+    color: #fff;
+  }
         </style>
     </head>
     <body>
@@ -198,19 +143,25 @@ footer a {
             <nav>
                 <ul id='navbar'>
                   <li><a href="#welcome-section">About</a></li>
-                  <li><a href="#projects">Work</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="mailto:yathinearth@gmail.com"><img class="logo" src="https://user-images.githubusercontent.com/39874341/56671890-14867700-66d3-11e9-98d2-5f695b947b10.png" alt="gmail logo"></a></li>
+                  <li><a href="https://twitter.com/yathinbabu"><img class="logo" src="https://user-images.githubusercontent.com/39874341/56671363-2287c800-66d2-11e9-9423-4f1594864656.png" alt="twitter logo"></a></li>
+                  <li><a href="https://instagram.com/yathin_babu"><img class="logo" src="https://user-images.githubusercontent.com/39874341/56672076-63341100-66d3-11e9-8447-3ffb8d578448.png" alt="instagram logo"></a></li>
                 </ul>
               </nav>
         </header>
         <main>
             <div id="welcome-section" class="intro">
-                
-                <h1>Hey i'am Yathin Babu.</h1>
-                <p>a web developer</p>
+
+                <h1>
+                    <a href="" class="typewrite" data-period="2000" data-type='[ "Hey I am Yathin Babu.", "I am CS Engineer", "I worked as a Jr. Full Stack Developer in OBAPS Global Technologies Private Limited", "You can check my projects below" ]'>
+                      <span class="wrap"></span>
+                    </a>
+                  </h1>
               
-              </div>
-              <div id="projects" class="work">
+              
+            </div>
+            <div id="projects" class="work">
                 <h2 class="work-header">These are some of my projects..</h2>
                 <a href="https://obaps.in" target="_blank" class="project project-tile">
                   <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653726-ef324280-66ab-11e9-8912-9ec13e844384.png" alt="project">
@@ -233,31 +184,67 @@ footer a {
                   <div class="project-title">touchhusconstructions.com</div>
                 </a>
               </div>
-              <div id="projects" class="work">
-                  <div class="header">
-                      <h2 class="work-header">Previous Experience</h2>
-                    </div>
-                    <p>I worked as Jr. Full Stack Developer in <a href="https://obaps.in">OBAPS Global Technologies Private Limited</a>, Tumkur, India.</p>
-                  <div class="header">
-                    <h2 class="work-header">Technologies i use</h2>
-                  </div>
-                  <img class="technologies-details" src="https://user-images.githubusercontent.com/39874341/56653880-58b25100-66ac-11e9-84ce-40802bd0bd66.png" alt="bootstrap logo">
-                  <img class="technologies-details" src="https://user-images.githubusercontent.com/39874341/56653905-6962c700-66ac-11e9-94e5-22b88b0cbd29.png" alt="MySql logo">
-                  <img class="technologies-details" src="https://user-images.githubusercontent.com/39874341/56653941-78497980-66ac-11e9-9e97-6a7f3d8b9a54.png" alt="Node JS logo">
-                  <img class="technologies-details" src="https://user-images.githubusercontent.com/39874341/56653988-8e573a00-66ac-11e9-98c5-6fb872be7e5e.png" alt="php logo">
-                  <img class="technologies-details" src="https://user-images.githubusercontent.com/39874341/56654009-9d3dec80-66ac-11e9-9f88-0731c20c2231.png" alt="React JS logo">
-              </div>
-              <div id="contact" class="contact">
-                <div class="header">
-                  <h1>Let's work together...</h1>
-                  <p>How do you take your coffee?</p>
-                </div>
-                <a href="https://twitter.com/yathinbabu" target="_blank" class="contact-details">Twitter</a>
-                <a href="mailto:yathinearth@gmail.com" class="contact-details">Send a mail</a>
-              </div>
         </main>
-        <footer>
-            &copy; Yathin Babu N, 2019. All Rights Reserved.<br>Proudly hosted on <a href="https://github.com">Github</a>
-        </footer>
+        <footer>&copy; Yathin Babu N, 2019. All Rights Reserved.
+            <p> Proudly hosted on <a href="https://www.github.com/" target="_blank">Github</a></p>
+          </footer>
+        <script type="text/javascript">
+            var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+        </script>
     </body>
 </html>
