@@ -6,6 +6,7 @@
         <meta name="keywords" content="Website Design,Website Development,Website Design in Tumkur,Website Developement in Tumkur,Website Design in Tumakuru,Website Developemnt in Tumakuru,Website Design in Karnataka,Website Development in Karnataka,Website Design in India,Website Development in India">
         <link href="https://user-images.githubusercontent.com/39874341/57013029-11394100-6c27-11e9-90c7-6a941996154c.png" rel="icon">
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <style>
             * {
                 margin: 0px;
@@ -247,9 +248,84 @@
                 margin: 40px 0;
                 }
             }
+
+            .spinner {
+                position: absolute;
+                top: 48%;
+                left: 48%;
+                width: 50px;
+                height: 40px;
+                text-align: center;
+                font-size: 10px;
+            }
+
+            .spinner > div {
+                background-color: #333;
+                height: 100%;
+                width: 6px;
+                display: inline-block;
+                
+                -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+                animation: sk-stretchdelay 1.2s infinite ease-in-out;
+            }
+
+            .spinner .rect2 {
+                -webkit-animation-delay: -1.1s;
+                animation-delay: -1.1s;
+            }
+
+            .spinner .rect3 {
+                -webkit-animation-delay: -1.0s;
+                animation-delay: -1.0s;
+            }
+
+            .spinner .rect4 {
+                -webkit-animation-delay: -0.9s;
+                animation-delay: -0.9s;
+            }
+
+            .spinner .rect5 {
+                -webkit-animation-delay: -0.8s;
+                animation-delay: -0.8s;
+            }
+
+            @-webkit-keyframes sk-stretchdelay {
+                0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+                20% { -webkit-transform: scaleY(1.0) }
+            }
+
+            @keyframes sk-stretchdelay {
+            0%, 40%, 100% { 
+                transform: scaleY(0.4);
+                -webkit-transform: scaleY(0.4);
+            }  20% { 
+                transform: scaleY(1.0);
+                -webkit-transform: scaleY(1.0);
+            }
+            }
+
+            .spinner-wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #fff;
+                z-index: 999999;
+            }
         </style>
     </head>
     <body>
+        <!--CSS Spinner-->
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
        <header>
             <nav>
                 <ul id='left-nav'>
@@ -333,7 +409,21 @@
         <footer>&copy; 2019, Yathin Babu N. All Rights Reserved.
             <p> Proudly hosted on <a href="https://www.github.com/" target="_blank">Github</a></p>
         </footer>
-        <a href="#welcome-section" id="back-to-top" class="back-to-top" style="display: inline;">Top</a> 
+        <a href="#welcome-section" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
+        
+        <script>
+                $(document).ready(function() {
+                //Preloader
+                $(window).on("load", function() {
+                preloaderFadeOutTime = 50000;
+                function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeToggle(preloaderFadeOutTime);
+                }
+                hidePreloader();
+                });
+                });
+        </script>
     </body>
     <script type="text/javascript">
 
