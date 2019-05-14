@@ -190,6 +190,44 @@
                 opacity: 1;
             }
 
+            .certifications {
+                padding-top: 60px;
+                margin-top: -60px;
+            }
+
+            .certifications .certifications-header {
+                margin-top: 50px;
+                color: #F7F7F7;
+                font-weight: bold;
+            }
+
+            .certificate {
+                text-decoration: none;
+                color: #fff;
+                display: inline-block;
+                overflow: hidden;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                height: 220px;
+                width: 280px;
+                margin: 40px 100px;
+                /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
+            }
+  
+            .certificate-pic {
+                width: 100%;
+                height: 180px;
+            }
+
+            .certificate-tile {
+                background-color: #006400;
+                border-radius: 5px;
+            }
+
+            .certificate-title {
+                padding-top: 5px;
+                font-weight: bold;
+            }
+
             @media only screen and (max-width: 768px) {
                 .intro a {
                     font-size: 20px;
@@ -220,6 +258,7 @@
                 <ul id='navbar'>
                     <li><a href="#welcome-section">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certification</a></li>
                     <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#footer-logos">Contact</a></li>
                 </ul>
@@ -228,37 +267,49 @@
        <main>
             <div id="welcome-section" class="intro">
                 <h1>
-                    <a href="#" class="typewrite" data-period="2000" data-type='[ "Hey I am Yathin Babu.", "I am a CS Engineer", "I worked as a Jr. Full Stack Developer in OBAPS Global Technologies Private Limited", "You can check my projects below" ]'>
+                    <a href="#" class="typewrite" data-period="2000" data-type='[ "Hey I am Yathin Babu", "I am a CS Engineer", "I worked as a Jr. Full Stack Developer in OBAPS Global Technologies Private Limited", "You can check my projects below" ]'>
                         <span class="wrap"></span>
                     </a>
                 </h1>
             </div>
             <div id="projects" class="work">
-                    <h2 class="work-header">These are some of my projects..</h2>
+                    <h2 class="work-header">Projects under OBAPS</h2>
                     <a href="http://chandrahoma.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653726-ef324280-66ab-11e9-8912-9ec13e844384.png" alt="chandrahoma.com">
+                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701864-83277680-767a-11e9-80a7-db3c709c8106.png" alt="chandrahoma.com">
                       <div class="project-title">chandrahoma.com</div>
                     </a>
                     <a href="http://creativefactri.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653765-04a76c80-66ac-11e9-853a-d95a53882bcd.png" alt="creativefactri.com">
+                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701941-a18d7200-767a-11e9-8c19-57f435ef425f.png" alt="creativefactri.com">
                       <div class="project-title">creativefactri.com</div>
                     </a>
                     <a href="http://kvirs.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653793-18eb6980-66ac-11e9-8acf-4b3dd51c9326.png" alt="kvirs.com">
+                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701973-b4a04200-767a-11e9-8e39-4d8895d73996.png" alt="kvirs.com">
                       <div class="project-title">kvirs.com</div>
                     </a>
                     <a href="https://obaps.in" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653820-2c96d000-66ac-11e9-9b8d-535382a92b75.png" alt="obaps.in">
+                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702026-d00b4d00-767a-11e9-8b33-57654914d817.png" alt="obaps.in">
                       <div class="project-title">obaps.in</div>
                     </a>
                     <a href="http://touchhusconstructions.com/" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/56653838-3e787300-66ac-11e9-8d5f-25cc916d2aa3.png" alt="touchhusconstructions.com">
+                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702074-e6b1a400-767a-11e9-9cc2-a61c0371ea2d.png" alt="touchhusconstructions.com">
                       <div class="project-title">touchhusconstructions.com</div>
                     </a>
                     <a href="http://grssportsacademy.com/" target="_blank" class="project project-tile">
                         <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57011634-4726f700-6c20-11e9-92ef-05c8d7a5d056.png" alt="grssportsacademy.com">
                         <div class="project-title">grssportsacademy.com</div>
                     </a>
+                    <h2 style="color: #DA8251 !important;">Independent project</h2>
+                    <a href="https://twitter.com/xaelbot" target="_blank" class="project project-tile">
+                        <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702493-d4843580-767b-11e9-9342-9710432b5c18.png" alt="xael twitter bot">
+                        <div class="project-title">Xael a twitter bot</div>
+                    </a>
+            </div>
+            <div id="certifications" class="certifications">
+                <h2 class="certifications-header">Certificate</h2>
+                <a href="https://www.freecodecamp.org/certification/yathin_babu/responsive-web-design" target="_blank" class="certificate certificate-tile">
+                    <img class="certificate-pic" src="https://user-images.githubusercontent.com/39874341/57704069-d996b400-767e-11e9-92c6-90ee66a9f7e8.png" alt="Responsive Web Design Certificate">
+                    <div class="certificate-title">Responsive Web Design</div>
+                </a>
             </div>
             <div id="technologies" class="technologies">
                 <div class="header">
