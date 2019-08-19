@@ -1,723 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Yathin Babu N - Specializing in website design and development</title>
-        <meta name="description" content="Specializing in static and dynamic websites design and development">
-        <meta name="keywords" content="Website Design,Website Development,Website Design in Tumkur,Website Developement in Tumkur,Website Design in Tumakuru,Website Developemnt in Tumakuru,Website Design in Karnataka,Website Development in Karnataka,Website Design in India,Website Development in India">
-        <link href="https://user-images.githubusercontent.com/39874341/57013029-11394100-6c27-11e9-90c7-6a941996154c.png" rel="icon">
-        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <style>
-            * {
-                margin: 0px;
-                padding: 0;
-            }
-
-            body {
-                /* background: url('images/background.jpg');
-                background-size: cover; */
-                background-color: #552C3F;
-                font-family: 'Muli', sans-serif;
-                text-align: center;
-            }
-/*
-            nav ul {
-                text-align: right;
-                position: absolute;
-                width: 100%;
-                background-color: transparent;
-            }
-  
-            nav ul li {
-                display: inline-block;
-                margin: 55px;
-                margin-bottom: 15px;
-                margin-top: 25px;
-            }
-*/  
-
-            nav ul li {
-                display: inline-block;
-                padding: 0 40px;
-            }
-            nav ul li a {
-                color: #fff;
-                font-weight: bold;
-                text-decoration: none;
-            }
-/*  
-            nav ul li a:hover {
-                color: #13D1D5;
-            }
-*/
-            .logo {
-                width: 25px;
-                height: 25px;
-            }
-
-            .intro {
-                top: 0;
-                min-height: 65vh;
-                padding-top: 35vh;
-                /*   line-height: 100vh; */
-                /*   width:100%;
-                height:96vh;
-            border:solid; */
-            }
-  
-            .intro p, h1 {
-                color: #13D1D5;
-            }
-
-            .intro a {
-                font-size: 50px;
-                color: #13D1D5;
-                text-decoration: none;
-            }
-
-            .work {
-                padding-top: 60px;
-                margin-top: -60px;
-            }
-  
-            .work .work-header {
-                margin-top: 50px;
-                color: #DA8251;
-                font-weight: bold;
-            }
-  
-            .project {
-                text-decoration: none;
-                color: #fff;
-                display: inline-block;
-                overflow: hidden;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                height: 220px;
-                width: 280px;
-                margin: 40px 100px;
-                /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
-            }
-  
-            .project-pic {
-                width: 100%;
-                height: 180px;
-            }
-
-            .project-tile {
-                background-color: #2B81D8;
-                border-radius: 5px;
-            }
-
-            .project-title {
-                padding-top: 5px;
-                font-weight: bold;
-            }
-  
-            .header {
-                padding: 160px 0 110px;
-            }
-
-            footer {
-                padding: 20px;
-                background: transparent;
-                color: white;
-                line-height: 40px;
-            }
-  
-            footer a {
-                color: #fff;
-            }
-
-            #left-nav {
-                text-align: left;
-            }
-
-            #left-nav a {
-                border: 3px solid #fff;
-                padding: 5px;
-            }
-
-            #footer-logos img {
-                width: 40px;
-                height: 40px;
-                margin: 0px 15px 0px 15px;
-            }
-
-            .technologies {
-                min-height: 55vh;
-                padding-top: 15vh;
-                padding-bottom: 30vh;
-            }
-
-            .technologies h1 {
-                margin-bottom: 100px;
-            }
-
-            .technologies img {
-                margin-left: 50px;
-            }
-
-            .technologies img:hover {
-                transform: scale(1.1);
-            }
-
-            .back-to-top {
-                background-color: #FF9A56;
-                color: #FFFFFF;
-                opacity: 0;
-                transition: opacity .6s ease-in-out;
-                z-index: 999;
-                position: fixed;
-                right: 20px;
-                bottom: 20px;
-                width: 50px;
-                height: 50px;
-                box-sizing: border-box;
-                border-radius: 0%;
-                text-decoration: none;
-            }
-  
-            a.back-to-top {
-                font-weight: 1000;
-                letter-spacing: 2px;
-                font-size: 14px;
-                text-transform: uppercase;
-                text-align: center;
-                line-height: 1.6;
-                padding-left: 2px;
-                padding-top: 14px;
-            }
-
-            .back-to-top:hover, .back-to-top:focus {
-                color: #FFFFFF;
-            }
-  
-            .back-to-top.show {
-                opacity: 1;
-            }
-
-            .certifications {
-                padding-top: 60px;
-                margin-top: -60px;
-            }
-
-            .certifications .certifications-header {
-                margin-top: 50px;
-                color: #F7F7F7;
-                font-weight: bold;
-            }
-
-            .certificate {
-                text-decoration: none;
-                color: #fff;
-                display: inline-block;
-                overflow: hidden;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                height: 220px;
-                width: 280px;
-                margin: 40px 100px;
-                /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
-            }
-  
-            .certificate-pic {
-                width: 100%;
-                height: 180px;
-            }
-
-            .certificate-tile {
-                background-color: #006400;
-                border-radius: 5px;
-            }
-
-            .certificate-title {
-                padding-top: 5px;
-                font-weight: bold;
-            }
-
-            @media only screen and (max-width: 768px) {
-                .intro a {
-                    font-size: 20px;
-                    color: #13D1D5;
-                    text-decoration: none;
-                }
-            }
-
-            @media only screen and (max-width: 500px) {
-                nav ul {
-                text-align: center;
-                }
-                nav ul li {
-                margin: 20px;
-                }
-                .project {
-                margin: 40px 0;
-                }
-            }
-
-            .spinner {
-                position: absolute;
-                top: 48%;
-                left: 48%;
-                width: 50px;
-                height: 40px;
-                text-align: center;
-                font-size: 10px;
-            }
-
-            .spinner > div {
-                background-color: #333;
-                height: 100%;
-                width: 6px;
-                display: inline-block;
-                
-                -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-                animation: sk-stretchdelay 1.2s infinite ease-in-out;
-            }
-
-            .spinner .rect2 {
-                -webkit-animation-delay: -1.1s;
-                animation-delay: -1.1s;
-            }
-
-            .spinner .rect3 {
-                -webkit-animation-delay: -1.0s;
-                animation-delay: -1.0s;
-            }
-
-            .spinner .rect4 {
-                -webkit-animation-delay: -0.9s;
-                animation-delay: -0.9s;
-            }
-
-            .spinner .rect5 {
-                -webkit-animation-delay: -0.8s;
-                animation-delay: -0.8s;
-            }
-
-            @-webkit-keyframes sk-stretchdelay {
-                0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-                20% { -webkit-transform: scaleY(1.0) }
-            }
-
-            @keyframes sk-stretchdelay {
-            0%, 40%, 100% { 
-                transform: scaleY(0.4);
-                -webkit-transform: scaleY(0.4);
-            }  20% { 
-                transform: scaleY(1.0);
-                -webkit-transform: scaleY(1.0);
-            }
-            }
-
-            .spinner-wrapper {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #fff;
-                z-index: 999999;
-            }
-
-            /*
----- Navbar
-*/
-.navbar {
-  height: 90px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-            .navbar-buttons {
-  position: relative;
-  width: 155px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Sing In Button */
-.button {
-  background-color: rgba(44, 45, 47, 0.749);
-  width: 97px;
-  height: 30px;
-  font-size: 12px;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-/*
----- Overlay
-*/
-.overlay {
-  position: fixed;
-  background: rgba(51, 55, 69, 0.80);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-}
-
-.overlay.open {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-}
-
-.overlay.open li {
-  animation: fadeInRight .5s ease forwards;
-  animation-delay: .35s;
-}
-.overlay.open li:nth-of-type(2) {
-  animation-delay: .4s;
-}
-.overlay.open li:nth-of-type(3) {
-  animation-delay: .45s;
-}
-.overlay.open li:nth-of-type(4) {
-  animation-delay: .50s;
-}
-
-/* Navigation Title */
-.overlay .nav-title {
-  font-size: 22px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 8%;
-}
-
-.overlay nav {
-  position: relative;
-  height: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 50px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 40px;
-}
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  height: 100%;
-}
-.overlay ul li {
-  display: block;
-  position: relative;
-  opacity: 0;
-  margin-bottom: 35px;
-}
-.overlay ul li a {
-  display: block;
-  position: relative;
-  color: #FFF;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus,
-.overlay ul li a:active {
-  color: #ea2e49;
-}
-.overlay ul li a:hover:after,
-.overlay ul li a:focus:after,
-.overlay ul li a:active:after {
-  width: 100%;
-  background: #ea2e49;
-}
-
-button:focus {
-  outline: 0;
-}
-
-.open-menu,
-.close-menu,
-.button {
-  cursor: pointer;
-  transition: transform 0.30s;
-}
-.open-menu:hover,
-.close-menu:hover,
-.button:hover {
-  transform: scale(1.1);
-}
-
-.overlay ul li a:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 43.5%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 3px;
-  background: #FFF;
-  transition: .35s;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-/*
----- Responsive
-*/
-
-@media (max-width: 670px) {
-  .overlay nav {
-    font-size: 30px;
-  }
-}
-@media (max-width: 550px) {
-  .overlay nav {
-    font-size: 20px;
-  }
-}
-        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yathin Babu | Freelance Website Developer</title>
+        <meta name="description" content="Business Website, E- Commerce Website, Responsive Website, Organization Website, School Website, Church Website, Community Group Website, Club Website, Special Interest Website, Personal Website, WordPress Website, Website Hosting, Buy Email Address, SEO">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!--CSS Spinner-->
-        <div class="spinner-wrapper">
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-       <header>
-            <nav class="navbar">
-                <ul id='left-nav'>
-                    <li><a href="https://yathinbabu.github.io">YB</a></li>
-                </ul>
-                <ul id='navbar'>
-                    <li class="navbar-buttons">
-                        <span><img class="open-menu" src="https://svgshare.com/i/DBu.svg" alt=""/></span>
-                    </li>
-                </ul>
-                <!-- Overlay Navigation Menu -->
-                <div class="overlay">
-                    <h2 class="nav-title">Yathin Babu</h2>
-                    <nav class="overlay-menu">
-                        <ul>
-                            <li><a href="#welcome-section">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#certifications">Certification</a></li>
-                            <li><a href="#technologies">Technologies</a></li>
-                            <li><a href="#footer-logos">Contact</a></li>
-                            <li><img class="close-menu" src="https://svgshare.com/i/DBL.svg" alt=""/></li>
-                        </ul>
-                    </nav>
-                </div>
-       </header>
-       <main>
-            <div id="welcome-section" class="intro">
-                <h1>
-                    <a href="#" class="typewrite" data-period="2000" data-type='[ "Hey I am Yathin Babu", "I am a CS Engineer", "I worked as a Jr. Full Stack Developer in OBAPS Global Technologies Private Limited", "You can check my projects below" ]'>
-                        <span class="wrap"></span>
-                    </a>
-                </h1>
-            </div>
-            <div id="projects" class="work">
-                    <h2 class="work-header">Projects under OBAPS</h2>
-                    <a href="http://chandrahoma.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701864-83277680-767a-11e9-80a7-db3c709c8106.png" alt="chandrahoma.com">
-                      <div class="project-title">chandrahoma.com</div>
-                    </a>
-                    <a href="http://creativefactri.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701941-a18d7200-767a-11e9-8c19-57f435ef425f.png" alt="creativefactri.com">
-                      <div class="project-title">creativefactri.com</div>
-                    </a>
-                    <a href="http://kvirs.com" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57701973-b4a04200-767a-11e9-8e39-4d8895d73996.png" alt="kvirs.com">
-                      <div class="project-title">kvirs.com</div>
-                    </a>
-                    <a href="https://obaps.in" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702026-d00b4d00-767a-11e9-8b33-57654914d817.png" alt="obaps.in">
-                      <div class="project-title">obaps.in</div>
-                    </a>
-                    <a href="http://touchhusconstructions.com/" target="_blank" class="project project-tile">
-                      <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702074-e6b1a400-767a-11e9-9cc2-a61c0371ea2d.png" alt="touchhusconstructions.com">
-                      <div class="project-title">touchhusconstructions.com</div>
-                    </a>
-                    <a href="http://grssportsacademy.com/" target="_blank" class="project project-tile">
-                        <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57011634-4726f700-6c20-11e9-92ef-05c8d7a5d056.png" alt="grssportsacademy.com">
-                        <div class="project-title">grssportsacademy.com</div>
-                    </a>
-                    <h2 style="color: #DA8251 !important;">Independent project</h2>
-                    <a href="https://twitter.com/xaelbot" target="_blank" class="project project-tile">
-                        <img class="project-pic" src="https://user-images.githubusercontent.com/39874341/57702493-d4843580-767b-11e9-9342-9710432b5c18.png" alt="xael twitter bot">
-                        <div class="project-title">Xael a twitter bot</div>
-                    </a>
-            </div>
-            <div id="certifications" class="certifications">
-                <h2 class="certifications-header">Certificate</h2>
-                <a href="https://www.freecodecamp.org/certification/yathin_babu/responsive-web-design" target="_blank" class="certificate certificate-tile">
-                    <img class="certificate-pic" src="https://user-images.githubusercontent.com/39874341/57704069-d996b400-767e-11e9-92c6-90ee66a9f7e8.png" alt="Responsive Web Design Certificate">
-                    <div class="certificate-title">Responsive Web Design</div>
+        <header>
+            <nav class="nav-bar" id="nav-bar">
+                <a href="#home" class="active">Yathin Babu</a>
+                <a href="#features">Features</a>
+                <a href="#services">Services</a>
+                <a href="#footer">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
                 </a>
+            </nav>
+        </header>
+        <main>
+            <div id="home">
+                <h1 class="white">Get a website for your <a href="#" class="typewrite" data-period="2000" data-type='[ "business", "organization", "school", "church", "community groups","clubs","special interest", "personal"]'><span class="wrap"></span></a>.</h1>
+                <p class="white"><strong>Grow your customers across the globe.</strong></p>
             </div>
-            <div id="technologies" class="technologies">
-                <div class="header">
-                    <h1>Technologies i use...</h1>
-                    <img src="https://user-images.githubusercontent.com/39874341/57010111-923d0c00-6c18-11e9-8caa-2d70f5c32b5f.png" alt="html">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010120-a54fdc00-6c18-11e9-810d-9842e08862ed.png" alt="css">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010125-b1d43480-6c18-11e9-83f2-9bb190f90ecb.png" alt="javascript">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010140-c1537d80-6c18-11e9-96b2-e12c25d2b675.png" alt="php">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010147-d16b5d00-6c18-11e9-87bc-ec63467af95d.png" alt="mysql">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010159-e2b46980-6c18-11e9-882f-1d039ca42d7c.png" alt="bootstrap">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010173-eea02b80-6c18-11e9-8066-0b3862f9033c.png" alt="reactjs">
-                    <img src="https://user-images.githubusercontent.com/39874341/57010186-01b2fb80-6c19-11e9-8fd3-9588b97d99a3.png" alt="nodejs">
+            <div id="features">
+                <h2 class="heading-h2">The recipes of our websites</h2>
+                <div id="features-flex">
+                    <div class="flex-box">
+                        <center>
+                            <img src="icons/responsive-website.png" alt="Responsive website">
+                        </center>
+                        <h3 class="blue">Responsive Websites</h3>
+                        <p>Get a single website that looks beautiful on Desktops, Laptops, Smartphones and other display devices.</p>
+                    </div>
+                    <div class="flex-box">
+                        <center>
+                            <img src="icons/seo.png" alt="Search engine optimization">
+                        </center>
+                        <h3 class="blue">Search Engine Optimization</h3>
+                        <p>We make sure that your business remains on the top in the searches, to get you more clients.</p>
+                    </div>
+                    <div class="flex-box">
+                        <center>
+                            <img src="icons/accessibility-tools.png" alt="Accessibility tools">
+                        </center>
+                        <h3 class="blue">Accessibility Tools</h3>
+                        <p>We make your website is accessible by all kinds of web or Internet users with our accessibility tools.</p>
+                    </div>
                 </div>
-            </div>           
-       </main>
-       <div id="footer-logos">
-           <a href="mailto:yathinmail@gmail.com"><img src="https://user-images.githubusercontent.com/39874341/57010274-784ff900-6c19-11e9-80ec-e73065536bdf.png" alt="email"></a>
-           <a href="https://twitter.com/yathinbabu"><img src="https://user-images.githubusercontent.com/39874341/57010283-869e1500-6c19-11e9-9161-df630341b79a.png" alt="twitter"></a>
-           <a href="https://instagram.com/yathinbabu"><img src="https://user-images.githubusercontent.com/39874341/57010290-91f14080-6c19-11e9-8ab2-0fdf9f4efd33.png" alt="instagram"></a>
-       </div>
-        <footer>&copy; 2019, Yathin Babu N. All Rights Reserved.
-            <p> Proudly hosted on <a href="https://www.github.com/" target="_blank">Github</a></p>
+            </div>
+            <div id="services">
+                <h2 class="heading-h2">Services</h2>
+                <div id="service-flex">
+                    <div id="service-flex-box">
+                        <img src="icons/websites.png" alt="Websites">
+                        <p>Websites</p>
+                    </div>
+                    <div id="service-flex-box">
+                            <img src="icons/domains.png" alt="Domains">
+                            <p>Domains</p>
+                    </div>
+                    <div id="service-flex-box">
+                            <img src="icons/hosting.png" alt="Hosting">
+                            <p>Hosting</p>
+                    </div>
+                    <div id="service-flex-box">
+                            <img src="icons/wordpress-hosting.png" alt="WordPress Hosting">
+                            <p>WordPress Hosting</p>
+                    </div>
+                    <div id="service-flex-box">
+                            <img src="icons/email.png" alt="Buy email address">
+                            <p>Buy Email Address</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div>
+                <center>
+                    <a href="mailto:anythingicode@gmail.com" target="_blank"><img src="icons/gmail.png" alt="Gmail"></a>
+                    <a href="https://twitter.com/anythingicode" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/anythingicode" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+                </center>
+            </div>
+            <p>Yathin Babu &copy; 2019</p>
         </footer>
-        <a href="#welcome-section" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
-        
-        <script>
-                $(document).ready(function() {
-                //Preloader
-                $(window).on("load", function() {
-                preloaderFadeOutTime = 10000;
-                function hidePreloader() {
-                var preloader = $('.spinner-wrapper');
-                preloader.fadeToggle(preloaderFadeOutTime);
-                }
-                hidePreloader();
-                });
-                });
-        </script>
-            <script type="text/javascript">
-
-                var TxtType = function(el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
-        
-        TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
-        
-            if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-        
-            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-        
-            var that = this;
-            var delta = 200 - Math.random() * 100;
-        
-            if (this.isDeleting) { delta /= 2; }
-        
-            if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-            }
-        
-            setTimeout(function() {
-            that.tick();
-            }, delta);
-        };
-        
-        window.onload = function() {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                  new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-            document.body.appendChild(css);
-        };
-            </script>
-            <script>
-                    var link = document.getElementById("back-to-top");
-                    var amountScrolled = 250;
-                  
-                  function addClass(el, className) {
-                  
-                      if (el.classList) {
-                          el.classList.add(className);
-                      } else {
-                          el.className += ' ' + className;
-                      }
-                  
-                  }
-                  
-                  function removeClass(el, className) {
-                      if (el.classList)
-                        el.classList.remove(className);
-                      else
-                        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');    
-                  }
-                    
-                  window.addEventListener('scroll', function(e) {
-                       if ( window.scrollY > amountScrolled ) {
-                           addClass(link, 'show');
-                       } else {
-                           removeClass(link, 'show');
-                       }
-                   });
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script>
-            <script>
-                $(document).ready(function() {
-  $('.open-menu').on('click', function() {
-     $('.overlay').addClass('open');
-  });
-
-  $('.close-menu').on('click', function() {
-    $('.overlay').removeClass('open');
-  });
-});
-            </script>
+        <script src="index.js"></script>
     </body>
 </html>
