@@ -1,0 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    position: relative;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+#form {
+    margin: 10vh auto;
+    max-width: 800px;
+}
+
+footer {
+    margin-top: 10vh;
+}
+
+button {
+    outline: none !important;
+}
