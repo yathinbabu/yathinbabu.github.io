@@ -171,4 +171,8 @@ body {
   margin: 0px 5px 0px 5px;
 }
 
+#footer #links {
+  margin-bottom: 10px;
+}
+
 /* Footer section ends */
