@@ -12,9 +12,15 @@
                 margin: 0;
                 font-family: 'Montserrat', sans-serif;
             }
+
+            .heading {
+                display: inline-table;
+            }
             
             .blue {
                 color: #050DB0;
+                display: table-cell;
+                vertical-align: middle;
             }
             
             .heading-h2 {
@@ -204,18 +210,18 @@
                 <h2 class="heading-h2">Explore our open source projects.</h2>
                 <div class="flex">
                     <div class="flex-box">
-                        <center>
+                        <div class="heading">
                             <img src="icons/password.png" alt="Password Generator">
-                        </center>
-                        <h3 class="blue">Password Generator</h3>
+                            <h3 class="blue">Password Generator</h3>
+                        </div>
                         <p>Get strong passwords for all of your accounts from our password generator.</p>
                         <p><a href="password-generator.html" target="_blank">Live</a>, <a href="https://github.com/yathinbabu/password-generator" target="_blank">Github</a></p>
                     </div>
                     <div class="flex-box">
-                        <center>
+                        <div class="heading">
                             <img src="icons/password.png" alt="Password Validator">
-                        </center>
-                        <h3 class="blue">Password Validator</h3>
+                            <h3 class="blue">Password Validator</h3>
+                        </div>
                         <p>Check your account passwords from our password validator to see how strong they are.</p>
                         <p><a href="password-validator.html" target="_blank">Live</a>, <a href="https://github.com/yathinbabu/password-validator" target="_blank">Github</a></p>
                     </div>
