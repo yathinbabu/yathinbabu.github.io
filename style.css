@@ -176,3 +176,45 @@ body {
 }
 
 /* Footer section ends */
+
+/* Tools and Technologies web page section starts */
+
+#t-a-t-header {
+  padding-top: 50vh;
+  min-height: 30vh;
+  background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/tool-and-technologies.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#t-a-t-header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.t-a-t-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.t-a-t-flex-box {
+  max-width: 300px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.t-a-t-flex-box h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  .t-a-t-flex-box {
+    margin-top: 40px;
+  }
+}
+
+/* Tools and Technologies web page section starts */
