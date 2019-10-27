@@ -11,9 +11,13 @@ body {
     display: inline-table;
 }
 
-#header h1 {
+#header div {
     display: table-cell;
     vertical-align: middle;
+}
+
+#header p {
+    text-align: center;
 }
 
 #main {
