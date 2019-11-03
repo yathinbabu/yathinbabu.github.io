@@ -31,7 +31,25 @@ body {
     text-align: left;
 }
 
-#main-image {
+#main p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+#main h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+}
+
+#header h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 58px;
+}
+
+.main-image {
     height: auto;
     max-width: 100%;
     display: block;
@@ -71,4 +89,28 @@ body {
         height: 150px;
         width: 300px;
     }
+
+    #main p {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    #header h1 {
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 33px;
+    }
+
+    #main h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+    }
+}
+
+.code {
+    font-family: monospace;
+    background: #F3F3F3;
+    padding: 5px;
 }
