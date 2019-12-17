@@ -177,6 +177,16 @@ body {
 
 /* Footer section ends */
 
+/* Floating button starts */
+.floating-button {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 999;
+}
+
+/* Floating button ends */
+
 /* Tools and Technologies web page section starts */
 
 #t-a-t-header {
