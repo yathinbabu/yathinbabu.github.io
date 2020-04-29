@@ -328,6 +328,10 @@ html {
     align-items: center;
     justify-content: center;
   }
+
+  .conversation-compose .send .circle:focus {
+    outline: none;
+  }
   
   .conversation-compose .send .circle i {
     font-size: 24px;
