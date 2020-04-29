@@ -70,7 +70,7 @@ $(function() {
       var lang=["HOW MANY LANGUAGES CAN YOU SPEAK","HOW MANY LANGUAGES CAN YOU UNDERSTAND","HOW MANY LANGUAGES CAN YOU SPEAK?","HOW MANY LANGUAGES CAN YOU UNDERSTAND?"];
       var ns = ["CAN YOU MARRY ME","CAN I MARRY YOU","CAN WE BE IN RELATIONSHIP","CAN YOU MARRY ME?","CAN I MARRY YOU?","CAN WE BE IN RELATIONSHIP?","HOW OLD ARE YOU","HOW OLD ARE YOU?"];
       var alone = ["I'M ALONE.","I'M ALONE","I'M LONELY.","I'M LONELY","I AM ALONE.","I AM ALONE"];
-      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED"];
+      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
     isInArray(wru, lastmsg)==true?(smsg="I am Xael", k=smsg):
