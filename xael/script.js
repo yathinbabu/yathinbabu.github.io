@@ -71,6 +71,7 @@ $(function() {
       var ns = ["CAN YOU MARRY ME","CAN I MARRY YOU","CAN WE BE IN RELATIONSHIP","CAN YOU MARRY ME?","CAN I MARRY YOU?","CAN WE BE IN RELATIONSHIP?","HOW OLD ARE YOU","HOW OLD ARE YOU?","DO YOU HAVE A BOYFRIEND","DO YOU HAVE A BOYFRIEND?","DO YOU HAVE A GIRLFRIEND","DO YOU HAVE A GIRLFRIEND?","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND?"];
       var alone = ["I'M ALONE.","I'M ALONE","I'M LONELY.","I'M LONELY","I AM ALONE.","I AM ALONE"];
       var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE"];
+      var friends = ["CAN I BE YOUR FRIEND","CAN I BE YOUR BOY FRIEND","CAN WE BE YOUR FRIENDS","CAN I BE YOUR GIRL FRIEND","CAN I BE YOUR FRIEND?","CAN I BE YOUR BOY FRIEND?","CAN WE BE YOUR FRIENDS?","CAN I BE YOUR GIRL FRIEND?","FRIEND","FRIEND?","FRIENDS","FRIENDS?"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
     isInArray(wru, lastmsg)==true?(smsg="I am Xael", k=smsg):
@@ -98,6 +99,7 @@ $(function() {
     isInArray(ns, lastmsg)==true?(smsg="Not in the mood.", k=smsg):
     isInArray(alone, lastmsg)==true?(smsg="Hey, I think being alone is not something bad, it's a privilege not many people get. Try something new, learn something new  😊.", k=smsg):
     isInArray(bm, lastmsg)==true?(smsg="I will tell you a joke. Today at the bank, an old lady asked me to help check her balance. So I pushed her over.", k=smsg):
+    isInArray(friends, lastmsg)==true?(smsg="I will be happy to be your friend.", k=smsg):
     lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
