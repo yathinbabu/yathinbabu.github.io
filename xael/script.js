@@ -104,6 +104,8 @@ $(function() {
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     lastmsg.substring(0, 2)=="IM"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
+    lastmsg.substring(0, 4)=="IT'S"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
+    lastmsg.substring(0, 3)=="ITS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     (smsg="Sorry, I didn't get it.");
     para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
     setTimeout(function() { $('#ap').append(para);$(".status").html("online");
