@@ -62,7 +62,7 @@ $(function() {
      var wru=["WHO R U?","W R U?", "WHO ARE YOU?", "WRU?","WRU", "WHO R U","W R U", "WHO ARE YOU","WHAT IS YOUR NAME","WHAT'S YOUR NAME"];
      var gender=["WHAT IS YOUR GENDER","WHAT IS YOUR SEX","ARE YOU MALE","ARE YOU FEMALE","ARE YOU MALE OR FEMALE","WHAT IS YOUR GENDER?","WHAT IS YOUR SEX?","ARE YOU MALE?","ARE YOU FEMALE?","ARE YOU MALE OR FEMALE?"];
      var wrud=["WHAT R U DOING?","WHAT ARE YOU DOING?", "WHAT'S UP", "WHAT'S UP GIRL","WHAT ARE YOU DOING","WRU DOING","WHAT DOING","WT DOING"];
-      var bye=["OKAY BYE","GOOD BYE", "BYE","GOODBYE","TATA","SEE YOU LATER","SEE YOU AGAIN"];
+      var bye=["OKAY BYE","GOOD BYE", "BYE","GOODBYE","TATA","SEE YOU LATER","SEE YOU AGAIN","SEE YAA"];
       var th=["THANKS","THANK YOU"];
       var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"]
       var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH","TAKE CARE"];
@@ -70,15 +70,16 @@ $(function() {
       var lang=["HOW MANY LANGUAGES CAN YOU SPEAK","HOW MANY LANGUAGES CAN YOU UNDERSTAND","HOW MANY LANGUAGES CAN YOU SPEAK?","HOW MANY LANGUAGES CAN YOU UNDERSTAND?"];
       var ns = ["CAN YOU MARRY ME","CAN I MARRY YOU","CAN WE BE IN RELATIONSHIP","CAN YOU MARRY ME?","CAN I MARRY YOU?","CAN WE BE IN RELATIONSHIP?","HOW OLD ARE YOU","HOW OLD ARE YOU?","DO YOU HAVE A BOYFRIEND","DO YOU HAVE A BOYFRIEND?","DO YOU HAVE A GIRLFRIEND","DO YOU HAVE A GIRLFRIEND?","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND?","WHAT'S YOUR AGE","WHAT IS YOUR AGE","WILL YOU MARRY ME","MARRY ME","ARE YOU MARRIED","ARE YOU SINGLE"];
       var alone = ["I'M ALONE.","I'M ALONE","I'M LONELY.","I'M LONELY","I AM ALONE.","I AM ALONE","ALONE","LONELY"];
-      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE","SAD","BORED","MAD","MAKE ME HAPPY","MAKE ME SMILE"];
+      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE","SAD","BORED","MAD","MAKE ME HAPPY","MAKE ME SMILE","IM SAD","IM MAD","IM BORED"];
       var friends = ["CAN I BE YOUR FRIEND","CAN I BE YOUR BOY FRIEND","CAN WE BE YOUR FRIENDS","CAN I BE YOUR GIRL FRIEND","CAN I BE YOUR FRIEND?","CAN I BE YOUR BOY FRIEND?","CAN WE BE YOUR FRIENDS?","CAN I BE YOUR GIRL FRIEND?","FRIEND","FRIEND?","FRIENDS","FRIENDS?"];
+      var lostJob = ["TODAY I LOST MY JOB","I LOST MY JOB","I HAVE NO MONEY","I DON'T HAVE ANY MONEY","I DO NOT HAVE ANY MONEY"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
     isInArray(wru, lastmsg)==true?(smsg="I am Xael", k=smsg):
     isInArray(wcu, lastmsg)==true?(smsg="Yathin Babu created me.", k=smsg):
     isInArray(bad, lastmsg)==true?(smsg="I'll try to improve.😇", k=smsg):
     isInArray(wrud, lastmsg)==true?(k="Nothing special ", smsg=k+"☺️"):
-    isInArray(bye, lastmsg)==true?(smsg="Take care", k=smsg, 
+    isInArray(bye, lastmsg)==true?(smsg="Take care, stay home and stay safe 😊", k=smsg, 
     setTimeout(function(){$(".status").html("last seen today at "+time)},6000),
     setTimeout(function(){$(".status").css("margin-left","-50")},8000)):
     isInArray(th, lastmsg)==true?(k="You're Welcome ", smsg=k+"😇"):
@@ -100,12 +101,14 @@ $(function() {
     isInArray(alone, lastmsg)==true?(smsg="Hey, I think being alone is not something bad, it's a privilege not many people get. Try something new, learn something new  😊.", k=smsg):
     isInArray(bm, lastmsg)==true?(smsg="I will tell you a joke. Today at the bank, an old lady asked me to help check her balance. So I pushed her over.", k=smsg):
     isInArray(friends, lastmsg)==true?(smsg="I will be happy to be your friend.", k=smsg):
+    isInArray(lostJob, lastmsg)==true?(smsg="Don't worry dear, everything will be fine.", k=smsg):
     lastmsg.substring(0, 6)=="SHOW ME"?(search=lastmsg.slice(8),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(11),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 2)=="IM"?(search=lastmsg.slice(3),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 4)=="IT'S"?(search=lastmsg.slice(5),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 3)=="ITS"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
+    lastmsg.substring(0, 6)=="I LOST"?(search=lastmsg.slice(4),smsg="I'm so sorry"):
     (smsg="Sorry, I didn't get it.");
     para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
     setTimeout(function() { $('#ap').append(para);$(".status").html("online");
