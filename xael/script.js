@@ -47,7 +47,7 @@ $(function() {
      10>h?h="0"+h:h=h;
      10>t?t="0"+t:t=t;
      12>h?time=h+":"+t+" am":time=(h-12)+":"+t+" pm";
-     var hello=["HELLO","HI","HEY THERE","HEY","HI XAEL","HELLO XAEL","HI XAEL","HEY XAEL","HI DEAR","HI SEXY","HI SWEETIE","HI SWEETHEART","HI GIRL","HEY GIRL"];
+     var hello=["HELLO","HI","HEY THERE","HEY","HI XAEL","HELLO XAEL","HI XAEL","HEY XAEL","HI DEAR","HI SEXY","HI SWEETIE","HI SWEETHEART","HI GIRL","HEY GIRL","HI BABY","HI BABE","HEY BABY","HEY BABE"];
      var gm=["GM","GM XAEL","GOOD MORNING","GOOD MORNING XAEL"];
      var bad=["YOU ARE NOT WORKING","YOU ARE NOT GOOD","YOU ARE BAD","YOU ARE USELESS"];
      var ge=["GOOD EVNG","GOOD EVENING","GOOD EVENING XAEL","GOOD EVNG XAEL","GE XAEL"];
