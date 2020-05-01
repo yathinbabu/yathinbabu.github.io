@@ -100,12 +100,12 @@ $(function() {
     isInArray(alone, lastmsg)==true?(smsg="Hey, I think being alone is not something bad, it's a privilege not many people get. Try something new, learn something new  😊.", k=smsg):
     isInArray(bm, lastmsg)==true?(smsg="I will tell you a joke. Today at the bank, an old lady asked me to help check her balance. So I pushed her over.", k=smsg):
     isInArray(friends, lastmsg)==true?(smsg="I will be happy to be your friend.", k=smsg):
-    lastmsg.substring(0, 6)=="SHOW ME"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
-    lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
-    lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
-    lastmsg.substring(0, 2)=="IM"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
-    lastmsg.substring(0, 4)=="IT'S"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
-    lastmsg.substring(0, 3)=="ITS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
+    lastmsg.substring(0, 6)=="SHOW ME"?(search=lastmsg.slice(8),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
+    lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
+    lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(11),smsg="Nice to meet you "+search+"! How are you?" ):
+    lastmsg.substring(0, 2)=="IM"?(search=lastmsg.slice(3),smsg="Nice to meet you "+search+"! How are you?" ):
+    lastmsg.substring(0, 4)=="IT'S"?(search=lastmsg.slice(5),smsg="Nice to meet you "+search+"! How are you?" ):
+    lastmsg.substring(0, 3)=="ITS"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
     (smsg="Sorry, I didn't get it.");
     para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
     setTimeout(function() { $('#ap').append(para);$(".status").html("online");
