@@ -47,7 +47,7 @@ $(function() {
      10>h?h="0"+h:h=h;
      10>t?t="0"+t:t=t;
      12>h?time=h+":"+t+" am":time=(h-12)+":"+t+" pm";
-     var hello=["HELLO","HI","HEY THERE","HEY","HI XAEL","HELLO XAEL","HI XAEL","HEY XAEL"];
+     var hello=["HELLO","HI","HEY THERE","HEY","HI XAEL","HELLO XAEL","HI XAEL","HEY XAEL","HI DEAR","HI SEXY","HI SWEETIE","HI SWEETHEART","HI GIRL","HEY GIRL"];
      var gm=["GM","GM XAEL","GOOD MORNING","GOOD MORNING XAEL"];
      var bad=["YOU ARE NOT WORKING","YOU ARE NOT GOOD","YOU ARE BAD","YOU ARE USELESS"];
      var ge=["GOOD EVNG","GOOD EVENING","GOOD EVENING XAEL","GOOD EVNG XAEL","GE XAEL"];
@@ -56,7 +56,7 @@ $(function() {
      var s2u=["I LOVE YOU","I MISS YOU"];
      var gaf=["GOOD AFTERNOON","GOOD AFTERNOON XAEL","GOOD AFTERNOON XAEL","GA XAEL"];
      var like=["GOOD","👍🏻", "☺️","😅","LOL","ME TOO"];
-     var hru=["HOW R U?","H R U?", "HOW ARE YOU?", "HRU?","HRU", "HOW R U","H R U", "HOW ARE YOU"];
+     var hru=["HOW R U?","H R U?", "HOW ARE YOU?", "HRU?","HRU", "HOW R U","H R U", "HOW ARE YOU","I'M GOOD HOW ARE YOU","I'M GREAT HOW ARE YOU","I'M FINE HOW ARE YOU","I'M AWESOME HOW ARE YOU"];
      var good=["I'M GOOD","I'M FINE", "I'M FINE U", "I AM FINE","I'M FINE AND HOW ARE YOU", "MEE TOO", "FINE","FINE:)","FINE :)", "MARVELOUS","AWESOME","FINE☺️","GREAT","I'M FINE, HOW ARE YOU?","IM FINE","IM GOOD","IM AWESOME","I'M HAPPY",,"I AM HAPPY","I'M FEELING GOOD",,"I AM FEELING GOOD"];
      var mood=["IM FINE, HOW ARE YOU?","IM GOOD, HOW ARE YOU?","IM AWESOME, HOW ARE YOU?","IM FINE HOW ARE YOU?","IM GOOD HOW ARE YOU?","IM AWESOME HOW ARE YOU?","IM FINE HOW ARE YOU","IM GOOD HOW ARE YOU","IM AWESOME HOW ARE YOU","IM FINE, HOW ARE YOU","IM GOOD, HOW ARE YOU","IM AWESOME, HOW ARE YOU","IM FINE HRU","IM GOOD HRU","IM AWESOME HRU","I'M FINE. HOW ARE YOU?","I'M GOOD. HOW ARE YOU?","I'M AWESOME. HOW ARE YOU?"];
      var wru=["WHO R U?","W R U?", "WHO ARE YOU?", "WRU?","WRU", "WHO R U","W R U", "WHO ARE YOU","WHAT IS YOUR NAME","WHAT'S YOUR NAME"];
@@ -65,12 +65,12 @@ $(function() {
       var bye=["OKAY BYE","GOOD BYE", "BYE","GOODBYE","TATA","SEE YOU LATER","SEE YOU AGAIN"];
       var th=["THANKS","THANK YOU"];
       var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"]
-      var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH"];
+      var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH","TAKE CARE"];
       var wcu=["WHO CREATED YOU",'WHO IS YOUR CREATOR',"WHO CREATED YOU?",'WHO IS YOUR CREATOR?',"WHO BUILT YOU","WHO BUILT YOU?"];
       var lang=["HOW MANY LANGUAGES CAN YOU SPEAK","HOW MANY LANGUAGES CAN YOU UNDERSTAND","HOW MANY LANGUAGES CAN YOU SPEAK?","HOW MANY LANGUAGES CAN YOU UNDERSTAND?"];
-      var ns = ["CAN YOU MARRY ME","CAN I MARRY YOU","CAN WE BE IN RELATIONSHIP","CAN YOU MARRY ME?","CAN I MARRY YOU?","CAN WE BE IN RELATIONSHIP?","HOW OLD ARE YOU","HOW OLD ARE YOU?","DO YOU HAVE A BOYFRIEND","DO YOU HAVE A BOYFRIEND?","DO YOU HAVE A GIRLFRIEND","DO YOU HAVE A GIRLFRIEND?","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND?"];
-      var alone = ["I'M ALONE.","I'M ALONE","I'M LONELY.","I'M LONELY","I AM ALONE.","I AM ALONE"];
-      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE"];
+      var ns = ["CAN YOU MARRY ME","CAN I MARRY YOU","CAN WE BE IN RELATIONSHIP","CAN YOU MARRY ME?","CAN I MARRY YOU?","CAN WE BE IN RELATIONSHIP?","HOW OLD ARE YOU","HOW OLD ARE YOU?","DO YOU HAVE A BOYFRIEND","DO YOU HAVE A BOYFRIEND?","DO YOU HAVE A GIRLFRIEND","DO YOU HAVE A GIRLFRIEND?","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND","DO YOU HAVE A BOYFRIEND OR GIRLFRIEND?","WHAT'S YOUR AGE","WHAT IS YOUR AGE","WILL YOU MARRY ME","MARRY ME","ARE YOU MARRIED"];
+      var alone = ["I'M ALONE.","I'M ALONE","I'M LONELY.","I'M LONELY","I AM ALONE.","I AM ALONE","ALONE","LONELY"];
+      var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE","SAD","BORED","MAD"];
       var friends = ["CAN I BE YOUR FRIEND","CAN I BE YOUR BOY FRIEND","CAN WE BE YOUR FRIENDS","CAN I BE YOUR GIRL FRIEND","CAN I BE YOUR FRIEND?","CAN I BE YOUR BOY FRIEND?","CAN WE BE YOUR FRIENDS?","CAN I BE YOUR GIRL FRIEND?","FRIEND","FRIEND?","FRIENDS","FRIENDS?"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
@@ -100,7 +100,7 @@ $(function() {
     isInArray(alone, lastmsg)==true?(smsg="Hey, I think being alone is not something bad, it's a privilege not many people get. Try something new, learn something new  😊.", k=smsg):
     isInArray(bm, lastmsg)==true?(smsg="I will tell you a joke. Today at the bank, an old lady asked me to help check her balance. So I pushed her over.", k=smsg):
     isInArray(friends, lastmsg)==true?(smsg="I will be happy to be your friend.", k=smsg):
-    lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
+    lastmsg.substring(0, 6)=="SHOW ME"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
     lastmsg.substring(0, 2)=="IM"?(search=lastmsg.slice(7),smsg="Nice to meet you! How are you?" ):
