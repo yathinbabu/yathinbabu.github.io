@@ -73,6 +73,8 @@ $(function() {
       var bm = ["I'M SAD","I'M MAD","I AM SAD","I AM MAD","I'M BORED","I AM BORED","TELL ME A JOKE","MAKE ME LAUGH","SAD","BORED","MAD","MAKE ME HAPPY","MAKE ME SMILE","IM SAD","IM MAD","IM BORED","I'M BAD","IM BAD"];
       var friends = ["CAN I BE YOUR FRIEND","CAN I BE YOUR BOYFRIEND","CAN WE BE FRIENDS","CAN I BE YOUR GIRLFRIEND","CAN I BE YOUR FRIEND?","CAN I BE YOUR BOYFRIEND?","CAN WE BE FRIENDS?","CAN I BE YOUR GIRLFRIEND?","FRIEND","FRIEND?","FRIENDS","FRIENDS?"];
       var lostJob = ["TODAY I LOST MY JOB","I LOST MY JOB","I HAVE NO MONEY","I DON'T HAVE ANY MONEY","I DO NOT HAVE ANY MONEY"];
+      var dance = ["CAN YOU DANCE","CAN YOU DANCE FOR ME","DANCE"];
+      var song = ["CAN YOU PLAY A SONG","PLAY A SONG","PLAY A SONG FOR ME","SONG","CAN YOU SING FOR ME"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
     isInArray(wru, lastmsg)==true?(smsg="I am Xael", k=smsg):
@@ -102,6 +104,8 @@ $(function() {
     isInArray(bm, lastmsg)==true?(smsg="I will tell you a joke. Today at the bank, an old lady asked me to help check her balance. So I pushed her over.", k=smsg):
     isInArray(friends, lastmsg)==true?(smsg="I will be happy to be your friend.", k=smsg):
     isInArray(lostJob, lastmsg)==true?(smsg="Don't worry dear, everything will be fine.", k=smsg):
+    isInArray(dance, lastmsg)==true?(smsg="💃", k=smsg):
+    isInArray(dance, lastmsg)==true?(smsg="🙅", k=smsg):
     lastmsg.substring(0, 7)=="SHOW ME"?(search=lastmsg.slice(8),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(11),smsg="Nice to meet you "+search+"! How are you?" ):
