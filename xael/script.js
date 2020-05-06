@@ -107,7 +107,7 @@ $(function() {
     isInArray(lostJob, lastmsg)==true?(smsg="Don't worry dear, everything will be fine.", k=smsg):
     isInArray(dance, lastmsg)==true?(smsg="💃", k=smsg):
     isInArray(dance, lastmsg)==true?(smsg="🙅", k=smsg):
-    isInArray(dance, lastmsg)==true?(smsg="Internet, I guess", k=smsg):
+    isInArray(wruf, lastmsg)==true?(smsg="Internet, I guess", k=smsg):
     lastmsg.substring(0, 7)=="SHOW ME"?(search=lastmsg.slice(8),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(11),smsg="Nice to meet you "+search+"! How are you?" ):
