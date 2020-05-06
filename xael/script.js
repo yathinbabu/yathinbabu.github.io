@@ -75,6 +75,7 @@ $(function() {
       var lostJob = ["TODAY I LOST MY JOB","I LOST MY JOB","I HAVE NO MONEY","I DON'T HAVE ANY MONEY","I DO NOT HAVE ANY MONEY"];
       var dance = ["CAN YOU DANCE","CAN YOU DANCE FOR ME","DANCE"];
       var song = ["CAN YOU PLAY A SONG","PLAY A SONG","PLAY A SONG FOR ME","SONG","CAN YOU SING FOR ME","CAN YOU SING","SING"];
+      var wruf = ["WHERE ARE YOU FROM","WHERE ARE YOU FROM?","WHERE R U FROM"];
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?(smsg="Hi, What's your name? 😊", k="Hi, What's your name? "):
     isInArray(wru, lastmsg)==true?(smsg="I am Xael", k=smsg):
@@ -106,6 +107,7 @@ $(function() {
     isInArray(lostJob, lastmsg)==true?(smsg="Don't worry dear, everything will be fine.", k=smsg):
     isInArray(dance, lastmsg)==true?(smsg="💃", k=smsg):
     isInArray(dance, lastmsg)==true?(smsg="🙅", k=smsg):
+    isInArray(dance, lastmsg)==true?(smsg="Internet, I guess", k=smsg):
     lastmsg.substring(0, 7)=="SHOW ME"?(search=lastmsg.slice(8),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the Top results" ):
     lastmsg.substring(0, 3)=="I'M"?(search=lastmsg.slice(4),smsg="Nice to meet you "+search+"! How are you?" ):
     lastmsg.substring(0, 10)=="MY NAME IS"?(search=lastmsg.slice(11),smsg="Nice to meet you "+search+"! How are you?" ):
