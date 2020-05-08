@@ -1,230 +1,145 @@
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+@font-face{
+    font-family: Extrude;
+    src: url('fonts/Extrude.ttf');
 }
-
-.blue {
-  color: #050DB0;
+@font-face{
+    font-family: Boxy;
+    src: url('fonts/PressStart2P.ttf');
 }
-
-.heading-h2 {
-  color: #050DB0;
-  text-align: center;
-  margin-top: 10vh;
+*{
+    padding: 0;
+    margin: 0;
+    user-select:none;
 }
-
-.white {
-  color: #fff;
+*:focus {
+    outline: none;
 }
-
-/* Nav bar code start */
-
-.nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  background-color: transparent;
-  z-index: 999;
+body{
+    margin: 0;
+    overflow: hidden;
 }
-
-.nav-bar a {
-  float: left;
-  display: block;
-  color: #050DB0;
-  text-align: center;
-  padding: 25px 16px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.nav-bar a.active {
-  color: #050DB0;
-}
-
-.nav-bar .icon {
-  display: none;
-}
-
-.nav-bar:hover {
-  background-color: #fff;
-}
-
-@media screen and (max-width: 600px) {
-  .nav-bar a:not(:first-child) {display: none;}
-  .nav-bar a.icon {
-    float: right;
+canvas{
+    height: 100%;
+    width: 100%;
     display: block;
-  }
 }
-
-@media screen and (max-width: 600px) {
-  .nav-bar.responsive {position: fixed;}
-  .nav-bar.responsive .icon {
+#score {
+    font-family: Boxy;
+    font-size: 15px;
+    color: white;
     position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav-bar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+    top: 10px;
+    right: 10px;
 }
-
-/* Nav bar code ends */
-
-/* Home section code starts */
-
-#home {
-  padding-top: 50vh;
-  min-height: 30vh;
-  background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/home.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+#splash{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('images/splash-screen.jpg');
+    background-size: auto 100%;
+    background-position: center center;
 }
-
-#home a {
-  text-decoration: none;
-  color: #fff;
+#title{
+    position: absolute;
+    height: 18vh;
+    width: 100vw;
+    top: 5vh;
+    font-family: Extrude;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6vh;
 }
-
-/* Home section code ends */
-
-/* Features section starts */
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+#loading{
+    opacity: 1;
+    position: relative;
+    top: 85vh;
+    width: 240px;
+    height: 8%;
+    margin: 0 auto;
+    font-size: 24px;
+    background-color: white;
 }
-
-.flex-box {
-  max-width: 300px;
-  height: 210px;
-  padding: 5px;
-  margin-top: 10px;
+.letter{
+    font-family: Boxy;
+    height: 80%;
+    float: left;
+    color: #11bfe2;
 }
-
-.flex-box h3 {
-  text-align: center;
+.main{
+    height: 80%;
+    margin: 5px 0px;
 }
-
-@media screen and (max-width: 600px) {
-
-  .flex-box {
-    margin-top: 40px;
-  }
+.period1{
+    animation: first 3s step-end infinite;
 }
-
-/* Features section ends */
-
-/* Services section starts */
-/*
-#service-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.period2{
+    animation: second 3s step-end infinite;
 }
-
-#service-flex-box {
-  max-width: 300px;
-  height: 50px;
-  padding: 5px;
-  margin-top: 10px;
-  display: inline-table;
+.period3{
+    animation: third 3s step-end infinite;
 }
-
-#service-flex-box p {
-  display: inline;
-  font-size: 20px;
-  display: table-cell;
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-@media screen and (max-width: 600px) {
-
-  #service-flex-box p {
+#instructions{
+    position: absolute;
+    top: 75vh;
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    font-family: 'Roboto';
     font-size: 16px;
-  }
+    text-align: center;
+    color: white;
 }
-*/
-/* Services section ends */
-
-/* Footer section starts */
-
-#footer {
-  margin-top: 50px;
-  padding: 20px 0px 20px 0px;
-  background-color: #F3F3F3;
-  font-size: 11px;
-  text-align: center;
+#play{
+    font-family: Boxy;
+    opacity: 0;
+    position: relative;
+    top: 80vh;
+    width: 200px;
+    height: 8%;
+    margin: 0 auto;
+    font-family: Boxy;
+    font-size: 24px;
+    text-align: center;
+    color: #11bfe2;
+    background-color: white;
 }
-
-#footer img {
-  margin: 0px 5px 0px 5px;
+#pressPlay{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
 }
-
-#footer #links {
-  margin-bottom: 10px;
+#restart {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    background-color: red;
+    color: white;
+    padding: 15px 30px 15px 30px;
+    font-family: Boxy;
+    font-size: 18px;
+    border-style: none;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
 }
-
-/* Footer section ends */
-
-/* Floating button starts */
-.floating-button {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  z-index: 999;
+@keyframes first{
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 1; }
 }
-
-/* Floating button ends */
-
-/* Tools and Technologies web page section starts */
-
-#t-a-t-header {
-  padding-top: 50vh;
-  min-height: 30vh;
-  background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/tool-and-technologies.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+@keyframes second{
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    50% { opacity: 1; }
+    75% { opacity: 1; }
 }
-
-#t-a-t-header a {
-  text-decoration: none;
-  color: #fff;
+@keyframes third{
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
 }
-
-.t-a-t-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.t-a-t-flex-box {
-  max-width: 300px;
-  padding: 5px;
-  margin-top: 10px;
-}
-
-.t-a-t-flex-box h3 {
-  text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-
-  .t-a-t-flex-box {
-    margin-top: 40px;
-  }
-}
-
-/* Tools and Technologies web page section starts */
