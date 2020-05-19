@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Yathin Babu</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/three.min.js"></script>
-    <script src="js/BufferGeometryUtils.min.js"></script>
-    <script src="js/stats.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icons/icon.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150926249-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yathin Babu</title>
+        <meta name="description" content="Hi I'm Yathin Babu, a M.Tech student and a Freelance website developer in India. Check out my profile card.">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@yathinbabu" />
+        <meta name="twitter:title" content="Yathin Babu" />
+        <meta name="twitter:description" content="Hi I'm Yathin Babu, a M.Tech student and a Freelance website developer in India. Check out my profile card." />
+        <meta name="twitter:image" content="https://www.yathinbabu.in/profile/images/yathin-babu.jpg" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icons/icon.png">
+        </style>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150926249-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-150926249-1');
-</script>
-<script data-ad-client="ca-pub-3972183387653974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-<body onload = "firstRun()">
-    <div id="score"></div>
-    <div id = "splash">
-        <div id = "title">
-            WHY DID THE CHICKEN<br/>CROSS<br/>THE ROAD?
+        gtag('config', 'UA-150926249-1');
+        </script>
+    </head>
+    <body>
+        <div id="profile-card">
+            <img id="profile-image" src="images/yathin-babu.jpg" alt="profile image">
+            <div id="profile-details">
+                <h1>@yathinbabu</h1>
+                <p id="profile-name">Yathin Babu</p>
+                <p id="profile-about">23, Website Developer, Traveller.<br>Karnataka, India.</p>
+            </div>
+            <div id="contacts">
+                <a href="https://github.com/yathinbabux"><img src="icons/github-1.png" alt="GitHub"></a>
+                <a href="https://twitter.com/yathinbabu"><img src="icons/twitter-1.png" alt="Twitter"></a>
+                <a href="https://in.linkedin.com/in/yathinbabu"><img src="icons/linkedin-1.png" alt="LinkedIn"></a>
+            </div>
+            <p id="footer"><a href="https://www.yathinbabu.in">Yathin Babu</a> &copy; 2020. All Rights Reserved.</p>
         </div>
-        <div id = "loading">
-            <div class = "main letter">LOADING</div>
-            <div class = "period1 letter">.</div>
-            <div class = "period2 letter">.</div>
-            <div class = "period3 letter">.</div>
-        </div>
-        <div id = "instructions">Use the arrow keys to move<br> around</div>
-        <div id = "play">
-            PLAY
-            <button id = "pressPlay" disabled onclick = "init()"></button>
-        </div>
-    </div>
-    <button id="restart" onclick = "init()">Play Again</button>
-    <script src="script.js"></script>
-</body>
+        <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
+    </body>
 </html>
