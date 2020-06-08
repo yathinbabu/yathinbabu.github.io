@@ -1,5 +1,6 @@
 body {
-    background-color: #152347; /*  #F8FB04 */
+    background-color: #ffffff; /*  #F8FB04, #152347 */
+    color: #000000;
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
@@ -22,6 +23,7 @@ body {
     display: block;
     margin: 10px auto;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 99;
 }
 
 #profile-details {
@@ -30,18 +32,18 @@ body {
 }
 
 #profile-details h1 {
-    color: #1595FF;
+    /*color: #1595FF; */
     margin-bottom: 0px;
 }
 
 #profile-name {
     margin-top: 5px;
     font-size: 18px;
-    color: #FFF922;
+    /* color: #FFF922; */
 }
 
 #profile-about {
-    color: #fff;
+    /* color: #fff; */
 }
 
 #contacts {
