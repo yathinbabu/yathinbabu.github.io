@@ -4,42 +4,81 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Yathin Babu</title>
-        <meta name="description" content="Hi I'm Yathin Babu, a M.Tech CSE student, photographer and traveller from India. Let's connect.">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@yathinbabu" />
-        <meta name="twitter:title" content="Yathin Babu" />
-        <meta name="twitter:description" content="Hi I'm Yathin Babu, a M.Tech CSE student, photographer and traveller from India. Let's connect." />
-        <meta name="twitter:image" content="https://www.yathinbabu.in/images/yathin-babu.jpg" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="description" content="Hi I'm Yathin Babu, a M.Tech CSE student, photographer and traveller from India. Check out my blog.">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="icons/icon.png">
-        </style>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <meta property="og:site_name" content="yathinbabu.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Yathin Babu" />
+        <meta property="og:description" content="Hi I'm Yathin Babu, a M.Tech CSE student, photographer and traveller from India. Check out my blog." />
+        <meta property="og:url" content="https://www.yathinbabu.in" />
+        <meta property="og:image" content="https://www.yathinbabu.in/images/home.jpg" />
+        <meta property="article:publisher" content="https://www.instagram.com/yathinbabu" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Yathin Babu" />
+        <meta name="twitter:description" content="Hi I'm Yathin Babu, a M.Tech CSE student, photographer and traveller from India. Check out my blog." />
+        <meta name="twitter:url" content="https://www.yathinbabu.in" />
+        <meta name="twitter:image" content="https://www.yathinbabu.in/images/home.jpg" />
+        <meta name="twitter:site" content="@yathinbabu" />
+        <meta name="twitter:creator" content="@yathinbabu" />
+        <meta property="og:image:width" content="950" />
+        <meta property="og:image:height" content="634" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150926249-1"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-150926249-1');
+            gtag('config', 'UA-150926249-1');
         </script>
     </head>
     <body>
-        <div id="profile-card">
-            <img id="profile-image" src="images/yathin-babu.jpg" alt="profile image">
-            <div id="profile-details">
-                <h1>Yathin Babu</h1>
-                <p id="profile-about">I'm a M.Tech CSE student,<br> Photographer and Traveller.<br>Karnataka, India.</p>
+        <header>
+            <nav class="nav-bar" id="nav-bar">
+                <a href="index.html" class="white">Yathin Babu</a>
+                <a href="about.html" class="white">About</a>
+                <a href="javascript:void(0);" class="icon white" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <div id="home">
+                <h1 class="white">Hey, I'm Yathin Babu</h1>
+                <p class="white"><strong>I'm a M.Tech CSE student and a Freelance Website Developer.</strong></p>
             </div>
-            <div id="contacts">
-                <a href="https://github.com/yathinbabux"><img src="icons/github.png" alt="GitHub"></a>
-                <a href="https://instagram.com/yathinbabu"><img src="icons/instagram.png" alt="Instagram"></a>
-                <a href="mailto:yathinmail@gmail.com"><img src="icons/gmail.png" alt="Gmail"></a>
+            <div id="blog">
+               <a href="does-developing-a-website-mean-just-coding.html">
+                    <div class="article">
+                        <div class="left">
+                            <img src="images/tool-and-technologies.jpg" alt="laptops">
+                        </div>
+                        <div class="right">
+                            <span class="type">web development</span>
+                            <h1 class="heading">Does developing a website mean just coding?</h1>
+                            <p class="intro">Learn about website development lifecycle.</p>
+                            <span class="date">June 28, 2020</span>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <p id="footer">Yathin Babu &copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>. All Rights Reserved.</p>
-        </div>
-        <script>
-            document.addEventListener('contextmenu', event => event.preventDefault());
-        </script>
+        </main>
+        <footer id="footer">
+            <div>
+                <center>
+                    <a href="https://www.linkedin.com/in/yathinbabu/" class="black">linkedin</a>
+                    <a href="https://github.com/yathinbabux" class="black">github</a>
+                    <a href="https://instagram.com/yathinbabu" class="black">instagram</a>
+                    <a href="mailto:yathinmail@gmail.com" class="black">email</a>
+                    <a href="privacy-policy.html" class="black">privacy policy</a>
+                </center>
+            </div>
+            <p>Yathin Babu &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
+        </footer>
+        <script src="index.js"></script>
     </body>
 </html>
