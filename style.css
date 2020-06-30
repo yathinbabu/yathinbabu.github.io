@@ -269,6 +269,10 @@
     padding: 15px;
 }
 
+#article-main a {
+  color: #000;
+}
+
 #article-main h2,#article-main p,#article-main li {
     text-align: left;
 }

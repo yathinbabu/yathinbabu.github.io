@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How to create a Twitter bot?</title>
+        <meta name="description" content="Create a twitter bot that retweets and randomly favorites tweets with a hashtag.">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icons/icon.png">
+        <meta property="og:site_name" content="yathinbabu.in" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="How to create a Twitter bot?" />
+        <meta property="og:description" content="Create a twitter bot that retweets and randomly favorites tweets with a hashtag." />
+        <meta property="og:url" content="https://www.yathinbabu.in/how-to-create-a-twitter-bot.html" />
+        <meta property="og:image" content="https://www.yathinbabu.in/images/twitter-bot.png" />
+        <meta property="article:tag" content="Website Design" />
+        <meta property="article:tag" content="Website Development" />
+        <meta property="article:tag" content="UX" />
+        <meta property="article:publisher" content="https://www.yathinbabu.in" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="How to a create Twitter bot?" />
+        <meta name="twitter:description" content="Create a twitter bot that retweets and randomly favorites tweets with a hashtag." />
+        <meta name="twitter:url" content="https://www.yathinbabu.in/how-to-create-a-twitter-bot.html" />
+        <meta name="twitter:image" content="https://www.yathinbabu.in/images/twitter-bot.png" />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="Yathin Babu" />
+        <meta name="twitter:label2" content="Filed under" />
+        <meta name="twitter:data2" content="Twitter, Twitter Bot, Node.js" />
+        <meta name="twitter:site" content="@yathinbabu" />
+        <meta name="twitter:creator" content="@yathinbabu" />
+        <meta property="og:image:width" content="950" />
+        <meta property="og:image:height" content="634" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150926249-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-150926249-1');
+        </script>
+    </head>
+    <body id="article-body">
+        <header id="article-header">
+            <div>
+                <h1>How to create a Twitter bot?</h1>
+                <p>Yathin Babu</p>
+            </div>
+        </header>
+        <main id="article-main">
+            <img class="article-main-image" src="images/twitter-bot.png" alt="Twitter and node.js icons">
+            <p>In this article we will be learning, how to create a Twitter bot that retweets and randomly like tweets with a hashtag using Node.js library, similar to <a href="https://twitter.com/xaelbot">xaelbot</a>.</p>
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Download the <a href="https://github.com/yathinbabux/100DaysOfCode-twitter-bot">twitter bot source code</a>.</li>
+                <li>Create a <a href="https://twitter.com">Twitter</a> account.</li>
+                <li>Install <a href="https://nodejs.org">Node.js</a> library on your system.</li>
+                <li>Create a <a href="https://www.heroku.com/">Heroku</a> free account to deploy your bot.</li>
+                <li>Download <a href="https://git-scm.com/downloads">git</a> and install it on you system.</li>
+            </ul>
+            <p>The bot will be using <a href="https://www.npmjs.com/package/twit">twit</a> which is an npm module to manipulate tweets and streams, and to communicate with the <a href="https://developer.twitter.com/en/docs">Twitter API</a>.</p>
+            <h2>Setup environment</h2>
+            <p>Setup an empty directory and initialise it with:$ npm init to configure this web application with package.json file. Then create two new files: bot.js & config.js in that directory.</p>
+            <p>bot.js will be our main app file in which we will be writing the source code of our Twitter Bot, and so in package.json edit the main field to:</p>
+            <p>
+                <code>
+                    {
+                        "main": "bot.js",
+    }
+                </code>
+            </p>
+            <p>Your current directory structure should look like this:</p>
+            <p>root/project-name |- bot.js |- config.js |- package.json</p>
+            <h3>Configuring and granting permissions from Twitter API</h3>
+            <p>After logging to to your Twitter account, go to the <a href="https://developer.twitter.com/en/apps">Twitter developer platform</a> to create a new application. Fill out the necessary fields in the form click on the button to create Your Twitter Application. The approval of developer account can take a day or two. After getting approval, creating the application, look for ‘Keys and Access Tokens’ under the nav-panes and click on 'Generate Token Actions' and then copy:</p>
+            <ul>
+                <li>Consumer Key</li>
+                <li>Consumer Secret</li>
+                <li>Access Token</li>
+                <li>Access Token Secret</li>
+            </ul>
+            <h3>//config.js /** TWITTER APP CONFIGURATION</h3>
+            <ul>
+                <li>consumer_key</li>
+                <li>consumer_secret</li>
+                <li>access_token</li>
+                <li>access_token_secret<pre> */module.exports = { consumer_key: '',
+                    consumer_secret: '', access_token: '',
+                    access_token_secret: '' }</pre></li>
+            </ul>
+            <p>Now, the Twitter bot’s configuration step is complete. Please note, for every different application, the consumer key, consumer secret, access_token and access_token_secret will differ.</p>
+            <h2>Building the bot</h2>
+            <p>Since the configuration step is complete, now let’s install our third requisite that is Twitter API client for node and will help us to communicate to Twitter API and provide an API for all necessary actions (such as retweet and favorite a tweet).</p>
+            <p>We will start by installing the dependency we need for our application.</p>
+            <p><code>$ npm install --save twit</code></p>
+            <p>After the dependency has finished installing, go to the bot.js file and require the dependency and config.js file.</p>
+            <p><code>var twit = require(’twit’); var config = require(’./config.js’);</code></p>
+            <p>Pass the configuration (consumer and access tokens) of our Twitter application in config.js to twit:</p>
+            <p><code>var Twitter = new twit(config);</code></p>
+            <p>PLEASE NOTE: You must refer to twit documentation for a deep reference.</p>
+            <h2>Retweet Bot</h2>
+            <p>Let’s write a function expression that finds the latest tweets according to the query passed as a parameter. We will initialise a params object that will hold various properties to search a tweet, but most importantly query or q property that will refine our searches. Whatever value you feed in this property, our bot will search the tweets to retweet based on this criteria. You can feed this property values like a twitter handler, to monitor a specific twitter account or a #hashtag. For our example bot, we have find latest tweets on #100DaysOfCode.</p>
+            <p>This is how the functionality of the retweet bot starts:</p>
+            <p><code>var retweet = function() { 
+                var params = { q: '#nodejs, #Nodejs', result_type: 'recent', lang: 'en'
+            }</code></p>
+            <p>The other two properties: result_type and lang are optional. On defining the result_type: 'recent' notifies bot to only search for the latest tweets, tweets that have occurred in the time period since our bot has started or it made the last retweet.</p>
+            <p>Our next step is to search for the tweets based on our parameters. For this, we will use Twitter.get function provided by twit API to GET any of the REST API endpoints. The REST API endpoint is a reference to the Twitter API endpoint we are going to make a call to search for tweets. The Twitter.get function accepts three arguments: API endpoint, params object (defined by us) and a callback.</p>
+            <p>To post or to retweet the tweet our bot has found we use Twitter.post() method to POST any of the REST API endpoints. It also takes the same number of arguments as Twitter.get().</p>
+            <p>Now to automate this action we defined above, we can use JavaScript’s timer function setInterval() to search and retweet after a specific period of time.</p>
+            <p>// grab & retweet as soon as program is running... retweet(); // retweet in every 50 minutes setInterval(retweet, 3000000);</p>
+            <p>Please note that all JavaScript’s Timer functions take the amount of time argument in milliseconds.</p>
+            <h2>Usage</h2>
+            <p>To run this bot, go to your terminal:</p>
+            <p><code>$ node bot.js</code></p>
+            <p>To avoid this monotonous process you can use npm scripts or nodemon. You can also deploy this app on Heroku for a continuous integration.</p>
+            <p>To use npm scripts, make this edit under scripts in package.json :</p>
+            <p><code>{ "scripts": {
+                "start": "node bot.js",
+                } }</code></p>
+            <p>Then from terminal:</p>
+            <p><code>$ npm start</code></p>
+            <h3>Deploy on heroku</h3>
+            <p>Signup for a free account by filling a form on <a href="https://heroku.com">Heroku</a>. After a successful sign up, you will be redirected to dashboard.</p>
+            <p>Create a new app by clicking the New button at the top right.</p>
+            <p>Fill in your app name (it should be in lower case) and choose your relevant region.</p>
+            <p>Move to the directory where you have saved the bot source file using CLI.</p>
+            <p>Download Heroku CLI. <a href="https://devcenter.heroku.com/categories/command-line">Refer the document here on how</a>.</p>
+            <p>Install it by using Teminal on Mac or Windows Powershell:</p>
+            <p><code>$heroku</code></p>
+            <p>Login through CLI:</p>
+            <p><code>$heroku login</code></p>
+            <p>Give the credentials. You will be logged in.</p>
+            <p>Choose your Deployment method on the dashboard, it could be Heroku Git, GitHub or Dropbox. But I highly recommend to go with Heroku Git.</p>
+            <p>Follow the cammands given under deployment methods to turn your directory into a git repository and to deploy on heroku.</p>
+            <p>Make sure the app is worker app not a web app. Procfile is necessary for that.</p>
+            <p><em>If you like the article do share on <a href="https://twitter.com/intent/tweet?text=How%20to%20create%20a%20Twitter%20bot%20using%20Node.js%20and%20@heroku%0A%0Ahttps%3A%2F%2Fwww.yathinbabu.in%2Fhow-to-create-a-twitter-bot.html%2F">Twitter</a></em>.</p>
+        </main>
+        <footer id="footer">
+            <div>
+                <center>
+                    <a href="https://www.linkedin.com/in/yathinbabu/" class="black">linkedin</a>
+                    <a href="https://github.com/yathinbabux" class="black">github</a>
+                    <a href="https://instagram.com/yathinbabu" class="black">instagram</a>
+                    <a href="mailto:yathinmail@gmail.com" class="black">email</a>
+                    <a href="privacy-policy.html" class="black">privacy policy</a>
+                </center>
+            </div>
+            <p>Yathin Babu &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
