@@ -6,6 +6,7 @@
         <title>How to create a Twitter bot?</title>
         <meta name="description" content="Create a twitter bot that retweets and randomly favorites tweets with a hashtag.">
         <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="icons/icon.png">
         <meta property="og:site_name" content="yathinbabu.in" />
@@ -43,6 +44,13 @@
     </head>
     <body id="article-body">
         <header id="article-header">
+            <nav class="privacy-policy-nav-bar" id="privacy-policy-nav-bar">
+                <a href="index.html" class="white">Yathin Babu</a>
+                <a href="about.html" class="white">About</a>
+                <a href="javascript:void(0);" class="icon white" onclick="myArticleFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
             <div>
                 <h1>How to create a Twitter bot?</h1>
                 <p>Yathin Babu</p>
@@ -85,9 +93,9 @@
                 <li>consumer_key</li>
                 <li>consumer_secret</li>
                 <li>access_token</li>
-                <li>access_token_secret<pre> */module.exports = { consumer_key: '',
+                <li>access_token_secret<code> */module.exports = { consumer_key: '',
                     consumer_secret: '', access_token: '',
-                    access_token_secret: '' }</pre></li>
+                    access_token_secret: '' }</code></li>
             </ul>
             <p>Now, the Twitter bot’s configuration step is complete. Please note, for every different application, the consumer key, consumer secret, access_token and access_token_secret will differ.</p>
             <h2>Building the bot</h2>
@@ -149,5 +157,6 @@
             </div>
             <p>Yathin Babu &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
         </footer>
+        <script src="index.js"></script>
     </body>
 </html>

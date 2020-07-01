@@ -256,6 +256,7 @@
 #article-header div {
     display: table-cell;
     vertical-align: middle;
+    padding-top: 100px;
 }
 
 #article-header p {
