@@ -5,26 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>How to handle the text on an image of the website?</title>
         <meta name="HandheldFriendly" content="True" />
-        <meta name="description" content="Placing text on an image of the website can be really frustrating due to low contrast, check how we overcome this nightmare with a simple css trick.">
+        <meta name="description" content="Having a text on image in a website can be frustrating when there is low contrast between image and text.">
         <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="blog-style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="icon" href="icons/icon.png">
-        <meta property="og:site_name" content="example.com" />
+        <meta property="og:site_name" content="yathinbabu.in" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="How to handle the text on an image of the website?" />
-        <meta property="og:description" content="Placing text on an image of the website can be really frustrating due to low contrast, check how we overcome this nightmare with a simple css trick." />
-        <meta property="og:url" content="https://www.example.com/how-to-handle-the-text-on-an-image-of-the-website.html" />
-        <meta property="og:image" content="https://www.example.com/images/group.png" />
+        <meta property="og:description" content="Having a text on image in a website can be frustrating when there is low contrast between image and text." />
+        <meta property="og:url" content="https://www.yathinbabu.in/how-to-handle-the-text-on-an-image-of-the-website.html" />
+        <meta property="og:image" content="https://www.yathinbabu.in/images/office.jpg" />
         <meta property="article:tag" content="Website Design" />
         <meta property="article:tag" content="UX" />
-        <meta property="article:publisher" content="https://www.instagram.com/yathinbabux" />
+        <meta property="article:publisher" content="https://www.twitter.com/yathinbabu" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How to handle the text on an image of the website?" />
-        <meta name="twitter:description" content="Placing text on an image of the website can be really frustrating due to low contrast, check how we overcome this nightmare with a simple css trick." />
-        <meta name="twitter:url" content="https://www.example.com/how-to-handle-the-text-on-an-image-of-the-website.html" />
-        <meta name="twitter:image" content="https://www.example.com/images/group.png" />
+        <meta name="twitter:description" content="Having a text on image in a website can be frustrating when there is low contrast between image and text." />
+        <meta name="twitter:url" content="https://www.yathinbabu.in/how-to-handle-the-text-on-an-image-of-the-website.html" />
+        <meta name="twitter:image" content="https://www.yathinbabu.in/images/office.jpg" />
         <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="Alex" />
+        <meta name="twitter:data1" content="Yathin Babu" />
         <meta name="twitter:label2" content="Filed under" />
         <meta name="twitter:data2" content="Website Design, UX" />
         <meta name="twitter:site" content="@yathinbabu" />
@@ -33,34 +33,37 @@
         <meta property="og:image:height" content="449" />
     </style>
     </head>
-    <body>
-        <header id="header">
+    <body id="article-body">
+        <header id="article-header">
+            <nav class="privacy-policy-nav-bar" id="privacy-policy-nav-bar">
+                <a href="index.html" class="white">Yathin Babu</a>
+                <a href="about.html" class="white">About</a>
+                <a href="javascript:void(0);" class="icon white" onclick="myArticleFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
             <div>
                 <h1>How to handle the text on an image of the website?</h1>
-                <p>Alex</p>
+                <p>Yathin Babu</p>
             </div>
         </header>
-        <main id="main">
-            <img class="main-image" src="images/group.png" alt="Image having text on it.">
-            <p>While designing a website, one of the most common and frustrating thing we come across is placing a text at some random position on an image. It looks awesome if have the sufficient contrast between the image and the text, but it feels like a nightmare if we don't. At the time when I first noticed this problem, I used to edit the image itself to make the text look good on it. :(</p>
-            <p>One of the use-case is having a slider on the landing page of a website. A slider on a website is a changing content area with different "slides" of visual or information. The slides may include a large image and they may also include text and button overlaid on top.</p>
-            <p>Over the years of designing and developing websites, I came to know about 2 methods to overcome this problem which we be discussing below.</p>
-            <h2>Background overlay</h2>
-            <p>Background overlay is a feature available as a property in Wordpress development. But in CSS it's not available as a property, but by using a code similar to below on a image, we can achieve a similar effect.</p>
-            <div class="code">
-                <p>
-                    .image {<br>
-                        background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/home.jpg');<br>
+        <main id="article-main">
+            <img class="article-main-image" src="images/office-1.jpg" alt="Image having text on it.">
+            <p>Placing the text on a image, for example while designing a header section in website, was one of the most frustrating thing I used to come across when I was new to the website development.</p>
+            <p>I used to edit the image directly to get enough contrast between image and text.</p>
+            <p>Then, after spending some time on Google I came across a technique called <em>background overlay</em> used in WordPress development.</p>
+            <p>It looks some thing like this</p>
+            <img class="article-main-image" src="images/overlay-effect-1.png" alt="Image having text on it.">
+            <p>Irrespective of the device width, the text got sufficient contrast with respect to the image.</p>
+            <p>In CSS, we can achieve similar effect using <em>background</em> property on the image.</p>
+            <p><code>
+                .image {
+                    background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/image.jpg');
                     }
-                </p>
-            </div>
-            <p>After applying the class mentioned above to the div tag of the slider, we will get the result similar to this.</p>
-            <img class="main-image" src="images/group-overlay.png" alt="Image after applying background overlay effect.">
-            <h2>Setting background color for text</h2>
-            <p>As the heading says, by setting the background color for the text we can overcome the contrast problem between an image and the text in front of it. I really don't recommend this method, as the background of the text blocks some parts of the image and looks awkward.</p>
-            <p>After applying the background color to the text, we will get the something similar to this.</p>
-            <img class="main-image" src="images/group-back.png" alt="Image after applying background color for the text.">
-            <p>If this article was helpful, tweet it or share it.</p>
+            </code></p>
+            <p>The final outcome after using the above CSS looks like this</p>
+            <img class="article-main-image" src="images/overlay-effect-2.png" alt="Image having text on it.">
+            <p><em>If you like the article do share on <a href="https://twitter.com/intent/tweet?text=How%20to%20handle%20the%20text%20on%20an%20image%20of%20the%20website%0ABy%20@yathinbabu%0A%0Ahttps%3A%2F%2Fwww.yathinbabu.in%2Fhow-to-handle-the-text-on-an-image-of-the-website.html%2F">Twitter</a></em>.</p>
         </main>
         <footer id="footer">
             <div>

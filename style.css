@@ -501,3 +501,19 @@
       }
     }
   /* Skill section starts */
+
+  /* Article special effects starts */
+
+  .overlay-effect {
+    background: linear-gradient(0deg,rgba(39, 151, 216,0.5),rgba(39, 151, 216,0.5)), url('images/office-2.jpg');
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .overlay-effect p {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  /* Article special effects ends */
