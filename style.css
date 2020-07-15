@@ -166,6 +166,10 @@
     padding: 10px 0px 10px 10px;
   }
 
+  .article .left {
+    overflow: hidden;
+  }
+
   .article .left img {
     max-width: 100%;
     height: auto;
@@ -225,6 +229,14 @@
     .article p {
       font-size: 17px;
       display: block;
+    }
+
+    .article img {
+      transition: transform .5s ease;
+    }
+
+    .article img:hover {
+      transform: scale(1.1);
     }
 
   }
