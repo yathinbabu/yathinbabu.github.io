@@ -13,17 +13,21 @@
     color: #fff;
   }
 
+  .gray {
+    color: #808080;
+  }
+
   /* Colors */
   
   /* Nav bar code start */
   
   .nav-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
-    background-color: transparent;
+    background-color: #fff;
     z-index: 999;
   }
   
@@ -31,14 +35,14 @@
     float: left;
     display: block;
     text-align: center;
-    padding: 25px 16px;
+    padding: 15px 20px;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
   }
 
-  .nav-bar a:hover {
-    text-decoration: underline;
+  .gray:hover {
+    color: #0066cc;
   }
   
   .nav-bar .icon {
@@ -151,7 +155,7 @@
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 15px 0px;
   }
 
   #blog a {
@@ -178,12 +182,12 @@
   }
 
   .article h1 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 400;
   }
 
   .article p {
-    font-size: 17px;
+    display: none;
   }
 
   .article .date {
@@ -211,7 +215,17 @@
     .article .right {
       float: left;
       width: 50%;
-    }  
+    }
+
+    .article h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  
+    .article p {
+      font-size: 17px;
+      display: block;
+    }
 
   }
 
