@@ -8,9 +8,4 @@ RewriteRule ^(.*)$ https://www.yathinbabu.in/$1 [R=301,L]
 
 ErrorDocument 404 https://www.yathinbabu.in/404.html
 
-<Files blog-data.json>
-Order allow,Deny
-Deny from all
-</Files>
-
 Options -Indexes
