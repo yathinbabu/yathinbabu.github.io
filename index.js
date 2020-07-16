@@ -29,7 +29,7 @@ fetch('blog-data.json')
   })
   .catch(function(err) {
     console.log('error: ' + err);
-  });
+});
 
 //Function to create blog article cards in home page
 function createBlogCard(data) {
@@ -72,3 +72,16 @@ function createBlogCard(data) {
     container.appendChild(a);
   }
 }
+
+var myNav = document.getElementById('nav-bar');
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+        myNav.classList.add("nav-bar-transparent");
+        myNav.classList.remove("nav-bar-colored");
+    } 
+    else {
+        myNav.classList.add("nav-bar-colored");
+        myNav.classList.remove("nav-bar-transparent");
+    }
+};

@@ -30,6 +30,14 @@
     background-color: #fff;
     z-index: 999;
   }
+
+  .nav-bar-colored {
+    opacity: 1;
+  }
+
+  .nav-bar-transparent {
+    opacity: 0.9;
+  }
   
   .nav-bar a {
     float: left;
@@ -177,7 +185,7 @@
 
   .article .type {
     text-transform: uppercase;
-    color: #000000;
+    color: #4f69f8;
     font-size: 12px;
   }
 
