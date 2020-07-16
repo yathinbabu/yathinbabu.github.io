@@ -1,49 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>404 Not Found</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="icon" href="icons/icon.png">
-        <style>
-        body {
-            position: relative;
-            background: linear-gradient(0deg,rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.5)), url('images/404.jpg');
-            font-family: 'Montserrat', sans-serif;
-            color: #fff;
-            text-align: center;
-        }
-
-        #main {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin: 20vh auto;
-        }
-
-        a {
-            font-size: 13px;
-            color: #fff;
-        }
-        </style>
-                    <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150926249-1"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-150926249-1');
-        </script>
-    </head>
-    <body>
-        <main id="main">
-            <h1>404</h1>
-            <p>Page Not Found</p>
-            <a href="https://www.yathinbabu.in">Go to home</a>
-        </main>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Yathin Babu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/icon.png">
+</head>
+<body>
+    <header id="header">
+        <nav class="privacy-policy-nav-bar" id="privacy-policy-nav-bar">
+            <a href="https://www.yathinbabu.in" class="white">Yathin Babu</a>
+            <a href="about.html" class="white">About</a>
+            <a href="javascript:void(0);" class="icon white" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+       <div class="center">
+           <h1>The page you’re looking for can’t be found.</h1>
+       </div>
+    </main>
+    <footer id="footer">
+        <div>
+            <center>
+                <a href="https://www.linkedin.com/in/yathinbabu/" class="black">linkedin</a>
+                <a href="https://github.com/yathinbabux" class="black">github</a>
+                <a href="https://twitter.com/yathinbabu" class="black">twitter</a>
+                <a href="https://instagram.com/yathinbabu" class="black">instagram</a>
+                <a href="privacy-policy.html" class="black">privacy policy</a>
+            </center>
+        </div>
+        <p>Yathin Babu &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
 </html>
