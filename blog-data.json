@@ -34,5 +34,14 @@
         "title": "How to handle the text on an image of the website?",
         "description": "Placing the text on a image can be frustrating in website development. Know who to handle it with CSS.",
         "date": "July 11, 2020"
+    },
+    {
+        "id": "5",
+        "url": "create-a-website-for-free.html",
+        "imgUrl": "images/website-in-computer.jpg",
+        "category": "web development",
+        "title": "Create a website for free",
+        "description": "Creating a website is fun. Learn how to creating a responsive portfolio website for free.",
+        "date": "July 20, 2020"
     }
 ]
