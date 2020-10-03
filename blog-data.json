@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "url": "does-developing-a-website-mean-just-coding.html",
+        "imgUrl": "images/tool-and-technologies.jpg",
+        "category": "web development",
+        "title": "Does developing a website mean just coding?",
+        "description": "Learn about website development lifecycle or development process.",
+        "date": "June 28, 2020"
+    },
+    {
+        "id": "2",
+        "url": "how-to-create-a-twitter-bot.html",
+        "imgUrl": "images/twitter-bot.png",
+        "category": "twitter bot",
+        "title": "How to create a Twitter bot?",
+        "description": "In this article we will be learning, how to create a Twitter bot that retweets and randomly like tweets with a hashtag using Node.js library.",
+        "date": "June 30, 2020"
+    },
+    {
+        "id": "3",
+        "url": "solutions-developed-by-amazon-facebook-google-magic-leap-microsoft.html",
+        "imgUrl": "images/computers.jpg",
+        "category": "computer science",
+        "title": "Solutions developed by Amazon, Facebook, Google, Magic Leap and Microsoft.",
+        "description": "Hi coder newbies, learning the concepts of computer science will be fun when you know how it is applied.",
+        "date": "July 6, 2020"
+    },
+    {
+        "id": "4",
+        "url": "how-to-handle-the-text-on-an-image-of-the-website.html",
+        "imgUrl": "images/office-1.jpg",
+        "category": "UX / UI",
+        "title": "How to handle the text on an image of the website?",
+        "description": "Placing the text on a image can be frustrating in website development. Know who to handle it with CSS.",
+        "date": "July 11, 2020"
+    },
+    {
+        "id": "5",
+        "url": "create-a-website-for-free.html",
+        "imgUrl": "images/website-in-computer.jpg",
+        "category": "web development",
+        "title": "Create a website for free",
+        "description": "Creating a website is fun. Learn how to creating a responsive portfolio website for free.",
+        "date": "July 20, 2020"
+    }
+]

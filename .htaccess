@@ -7,3 +7,5 @@ RewriteCond %{HTTP_HOST} ^yathinbabu\.in$ [NC]
 RewriteRule ^(.*)$ https://www.yathinbabu.in/$1 [R=301,L]
 
 ErrorDocument 404 https://www.yathinbabu.in/404.html
+
+Options -Indexes

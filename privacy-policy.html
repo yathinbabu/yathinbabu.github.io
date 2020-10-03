@@ -39,9 +39,9 @@
     <body>
         <header>
             <nav class="privacy-policy-nav-bar" id="privacy-policy-nav-bar">
-                <a href="index.html" class="white">Yathin Babu</a>
+                <a href="https://www.yathinbabu.in" class="white">Yathin Babu</a>
                 <a href="about.html" class="white">About</a>
-                <a href="javascript:void(0);" class="icon white" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon white" onclick="myArticleFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
             </nav>
@@ -85,16 +85,6 @@
             </div>
             <p>Yathin Babu &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
         </footer>
-        <script>
-            function myFunction() {
-                var x = document.getElementById("privacy-policy-nav-bar");
-                if (x.className === "privacy-policy-nav-bar") {
-                    x.className += " responsive";
-                    x.style.backgroundColor = '#000';
-                } else {
-                    x.className = "privacy-policy-nav-bar";
-                }
-            }
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
